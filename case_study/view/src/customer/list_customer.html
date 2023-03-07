@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../navbar_table.css">
+    <style>
+        body {
+            background-color: rgba(0, 90, 0, 0.08);
+        }
+    </style>
+</head>
+<body>
+<div th:insert="fragment.html :: header">
+</div>
+
+<nav class="nav-color navbar navbar-expand-lg bg-body-tertiary nav-color p-2">
+
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active a" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link a" href="#">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link a" href="#">Employee</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link a" href="#">Facility</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link a" href="#">Contract</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle a" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        More
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item a" href="#">Action</a></li>
+                        <li><a class="dropdown-item a" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider a">
+                        </li>
+                        <li><a class="dropdown-item a" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex" role="search" action="/customer" method="get">
+                <input name="action" value="search" hidden>
+                <input name="nameSearch" class="form-control me-2" type="search" placeholder="name..">
+                <input name="emailSearch" class="form-control me-2" type="search" placeholder="email..">
+                <select class="me-2" name="customerTypeId" type="select">
+                    <option></option>
+                    <option>All</option>
+                    <option selected>Chọn loại khách hàng</option>
+                </select>
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<h1 class="row">
+    <div class="col-lg-2">
+        <a class="btn btn-success" href="/customer/showAdd">add</a>
+    </div>
+
+    <p class="col-lg-6" th:text="${message}"></p>
+</h1>
+<table id="table">
+    <tr>
+        <th>Name</th>
+        <th>Customer Type</th>
+        <th>Day Of Birth</th>
+        <th>Gender</th>
+        <th>Id Card</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th colspan="2"></th>
+    </tr>
+    <tr>
+        <td>dsf</td>
+        <td>dsf</td>
+        <td>dsf</td>
+        <td>dsf</td>
+        <td>dsf</td>
+        <td>dsf</td>
+        <td>dsf</td>
+        <td>dsf</td>
+        <td>
+            <a class="btn btn-success" th:href="@{/customer/update/__${customer.getId()}__}">update</a>
+        </td>
+        <td>
+            <button th:attr="onclick=|setInfoDelete('${customer.getId()}','${customer.getName()}')|" type="button"
+                    class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete">
+                Delete
+            </button>
+        </td>
+    </tr>
+</table>
+<div class="page-control">
+    <a class="text-decoration-none button" th:href="@{/customer(page=${customers.number - 1}
+           , nameSearch=${nameSearch}
+           , emailSearch=${emailSearch}
+           , customerTypeId=${customerTypeId})}" th:if="${customers.hasPrevious()}">
+        Previous
+    </a>
+
+    <span th:text="${customers.number + 1} "></span>/<span th:text="${customers.totalPages}"></span>
+
+    <a class="text-decoration-none button" th:href="@{/customer(page=${customers.number + 1}
+           , nameSearch=${nameSearch}
+           , emailSearch=${emailSearch}
+           , customerTypeId=${customerTypeId})}" th:if="${customers.hasNext()}">
+        Next
+    </a>
+</div>
+<br>
+<hr>
+
+<!-- Modal Delete -->
+<div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Delete</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="/customer/delete" method="post">
+                <div class="modal-body">
+                    <input hidden id="idDelete" name="idDelete">
+                    <span>Bạn có chắc chắn muốn xóa</span>
+                    <span class="text-danger" id="nameDelete"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div th:insert="fragment.html :: footer"></div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script>
+</script>
+</html>

@@ -76,3 +76,14 @@
     padding: 5px;
     background-image: linear-gradient(180deg, #033b03, rgba(12, 70, 26, 0.75));
 }
+
+.with-middle {
+    width: 100px;
+}
+
+.with-large {
+    width: 400px;
+}
+.error {
+    color: red;
+}
