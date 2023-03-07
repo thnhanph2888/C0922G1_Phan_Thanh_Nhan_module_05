@@ -1,0 +1,11 @@
+<table>
+  <td>
+    <label for="inputColor">Choose color: </label>
+  </td>
+  <td>
+    <input (change)="changeColor(colorInput.value)" #colorInput id="inputColor" type="color">
+  </td>
+</table>
+<h1 [style.color]="color">
+  Here
+</h1>

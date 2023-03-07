@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <td>
+      <input #numberOne>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input #numberTwo>
+    </td>
+  </tr>
+</table>
+
+<input type="button" #element1 class="btn btn-outline-dark m-1 rounded-pill"
+       (click)="calculator(numberOne.value, numberTwo.value, element1.value)" readonly value="+">
+
+<input type="button" #element2 class="btn btn-outline-dark m-1 rounded-pill"
+       (click)="calculator(numberOne.value, numberTwo.value, element2.value)" readonly value="-">
+
+<input type="button" #element3 class="btn btn-outline-dark m-1 rounded-pill"
+       (click)="calculator(numberOne.value, numberTwo.value, element3.value)" readonly value="*">
+
+<input type="button" #element4 class="btn btn-outline-dark m-1 rounded-pill"
+       (click)="calculator(numberOne.value, numberTwo.value, element4.value)" readonly value="/">
+
+<p class="text-dark" >{{result}}{{message}}</p>
+
