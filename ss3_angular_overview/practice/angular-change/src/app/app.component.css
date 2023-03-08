@@ -1,0 +1,89 @@
+#header {
+  background-color: rgb(15, 42, 15);
+}
+.nav-color {
+  background-color: rgba(12, 70, 26, 0.91);
+}
+#ul {
+  padding: 5px 1px 5px;
+  background-image: linear-gradient(  rgb(0, 82, 20),  rgb(0, 80, 17), rgb(0, 90, 24));
+  position: relative;
+  background-color: rgb(0, 80, 17);
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+}
+
+.a {
+  color: #d5ffd5;
+  text-decoration: none;
+}
+
+.dropdown-menu {
+  background-color: #042b00;
+}
+
+#logo {
+  border-radius: 40px;
+  padding: 18px;
+}
+
+select {
+  border-radius: 5px;
+}
+
+/**/
+#table {
+  width: 100%;
+  border-collapse: collapse;
+  padding: 0.5em;
+  background-color: rgba(189, 255, 126, 0.04);
+}
+
+#table th {
+  color: #002807;
+  background-color: rgba(0, 150, 33, 0.38);
+}
+
+#table th, #table td {
+  padding: 10px;
+  border: 1px solid rgba(25, 61, 25, 0.67);
+}
+
+/**/
+.page-control {
+  float: right;
+  padding: 1em;
+}
+
+.button {
+  border-radius: 4px;
+  padding: 0.4ex;
+  background-color: rgba(0, 86, 9, 0.52);
+  color: white;
+}
+
+.footer {
+  background-color: rgba(12, 70, 26, 0.78);
+  color: white;
+}
+
+#footer-table td {
+  padding: 5px 10px;
+}
+
+.text-footer {
+  padding: 5px;
+  background-image: linear-gradient(180deg, #033b03, rgba(12, 70, 26, 0.75));
+}
+
+.with-middle {
+  width: 100px;
+}
+
+.with-large {
+  width: 400px;
+}
+.error {
+  color: red;
+}
