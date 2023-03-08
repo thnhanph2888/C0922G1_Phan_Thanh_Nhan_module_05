@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-<div th:insert="fragment.html :: header">
+<div>
 </div>
 
 <nav class="nav-color navbar navbar-expand-lg bg-body-tertiary nav-color p-2">
@@ -71,7 +71,7 @@
         <a class="btn btn-success" href="/customer/showAdd">add</a>
     </div>
 
-    <p class="col-lg-6" th:text="${message}"></p>
+    <p class="col-lg-6" ></p>
 </h1>
 <table id="table">
     <tr>
@@ -95,10 +95,10 @@
         <td>dsf</td>
         <td>dsf</td>
         <td>
-            <a class="btn btn-success" th:href="@{/customer/update/__${customer.getId()}__}">update</a>
+            <a class="btn btn-success" >update</a>
         </td>
         <td>
-            <button th:attr="onclick=|setInfoDelete('${customer.getId()}','${customer.getName()}')|" type="button"
+            <button  type="button"
                     class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete">
                 Delete
             </button>
@@ -106,19 +106,13 @@
     </tr>
 </table>
 <div class="page-control">
-    <a class="text-decoration-none button" th:href="@{/customer(page=${customers.number - 1}
-           , nameSearch=${nameSearch}
-           , emailSearch=${emailSearch}
-           , customerTypeId=${customerTypeId})}" th:if="${customers.hasPrevious()}">
+    <a class="text-decoration-none button" >
         Previous
     </a>
 
-    <span th:text="${customers.number + 1} "></span>/<span th:text="${customers.totalPages}"></span>
+    <span></span>
 
-    <a class="text-decoration-none button" th:href="@{/customer(page=${customers.number + 1}
-           , nameSearch=${nameSearch}
-           , emailSearch=${emailSearch}
-           , customerTypeId=${customerTypeId})}" th:if="${customers.hasNext()}">
+    <a class="text-decoration-none button">
         Next
     </a>
 </div>
@@ -147,7 +141,7 @@
         </div>
     </div>
 </div>
-<div th:insert="fragment.html :: footer"></div>
+<div ></div>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

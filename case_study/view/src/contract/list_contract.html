@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <title>List Facility</title>
@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="../navbar_table.css">
 </head>
 <body>
-<div th:insert="fragment.html :: header"></div>
+<div ></div>
 <h1><a class="btn btn-success" href="/contract/showAdd">add</a></h1>
-<span th:text="${message}"></span>
+<span></span>
 <table id="table">
     <tr>
         <th>Dịch vụ</th>
@@ -31,11 +31,11 @@
         <td>wer</td>
         <td>wer</td>
         <td>
-            <button th:attr="onclick=|showAddAttachFacility('${contractDto.getIdContract}')|" type="button" data-bs-toggle="modal" data-bs-target="#addAttachFacility" class="btn btn-success">
+            <button  type="button" data-bs-toggle="modal" data-bs-target="#addAttachFacility" class="btn btn-success">
                 +
             </button>
             <span class="dropdown">
-                <button type="button" data-bs-toggle="modal" data-bs-target="#showListAttachFacility" th:attr="onclick=|setListAttachFacility('${contractDto.getIdContract()}')|" class="btn btn-success" >
+                <button type="button" data-bs-toggle="modal" data-bs-target="#showListAttachFacility" class="btn btn-success" >
                     Danh sách các dịch vụ đi kèm
                 </button>
             </span>
@@ -43,15 +43,13 @@
     </tr>
 </table>
 <div class="page-control">
-    <a class="text-decoration-none button" th:href="@{/contract(page=${contractDtoList.number - 1})}"
-       th:if="${contractDtoList.hasPrevious()}">
+    <a class="text-decoration-none button">
         Previous
     </a>
 
-    <span th:text="${contractDtoList.number + 1} "></span>/<span th:text="${contractDtoList.totalPages}"></span>
+    <span></span>/<span ></span>
 
-    <a class="text-decoration-none button" th:href="@{/contract(page=${contractDtoList.number + 1})}"
-       th:if="${contractDtoList.hasNext()}">
+    <a class="text-decoration-none button">
         Next
     </a>
 </div>
@@ -94,7 +92,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                <button type="button" th:attr="onclick=|addAttachFacility('')|" data-bs-dismiss="modal" class="btn btn-success">Thêm</button>
+                <button type="button" class="btn btn-success">Thêm</button>
             </div>
         </div>
     </div>
@@ -122,7 +120,7 @@
         </div>
     </div>
 </div>
-<div th:insert="fragment.html :: footer"></div>
+<div></div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>

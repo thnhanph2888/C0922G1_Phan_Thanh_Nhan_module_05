@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Update</title>
@@ -16,24 +16,24 @@
 </div>
 <div class="d-flex justify-content-center mt-5">
     <form action="/customer/save" method="post">
-        <table class="table" th:object="${customerDto}">
+        <table class="table" >
             <tr>
                 <td>
                     <label class="with-middle" for="name_customer">Họ tên: </label>
                 </td>
                 <td>
-                    <input class="with-large" id="name_customer" th:field="*{name}">
+                    <input class="with-large" id="name_customer">
                 </td>
             </tr>
             <tr>
-                <td class="error" colspan="2"><p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p></td>
+                <td class="error" colspan="2"><p ></p></td>
             </tr>
             <tr>
                 <td>
                     <label class="with-middle" for="birthday_customer">Ngày sinh: </label>
                 </td>
                 <td>
-                    <input class="with-large" id="birthday_customer" th:field="*{dayOfBirth}">
+                    <input class="with-large" id="birthday_customer">
                 </td>
             </tr>
             <tr>
@@ -41,9 +41,9 @@
                     Giới tính:
                 </td>
                 <td>
-                    <input id="male" th:field="*{gender}" type="radio" name="gender_customer" value="true">
+                    <input id="male"  name="gender_customer" value="true">
                     <label>Nam</label>
-                    <input id="female" th:field="*{gender}" type="radio" name="gender_customer" value="false">
+                    <input id="female"  type="radio" name="gender_customer" value="false">
                     <label>Nữ</label>
                 </td>
             </tr>
@@ -52,42 +52,41 @@
                     <label class="with-middle" for="id_card_customer">Số CMND: </label>
                 </td>
                 <td>
-                    <input class="with-large" id="id_card_customer" th:field="*{idCard}">
+                    <input class="with-large" id="id_card_customer">
                 </td>
             </tr>
             <tr>
-                <td class="error" colspan="2"><p th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}"></p></td>
+                <td class="error" colspan="2"><p ></p></td>
             </tr>
             <tr>
                 <td>
                     <label class="with-middle" for="phone_customer">Điện thoại: </label>
                 </td>
                 <td>
-                    <input class="with-large" id="phone_customer" th:field="*{phoneNumber}">
+                    <input class="with-large" id="phone_customer">
                 </td>
             </tr>
             <tr>
-                <td class="error" colspan="2"><p th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></p></td>
+                <td class="error" colspan="2"><p ></p></td>
             </tr>
             <tr>
                 <td>
                     <label class="with-middle" for="email_customer">Email: </label>
                 </td>
                 <td>
-                    <input class="with-large" id="email_customer" th:field="*{email}">
+                    <input class="with-large" id="email_customer" >
                 </td>
             </tr>
             <tr>
-                <td class="error" colspan="2"><p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p></td>
+                <td class="error" colspan="2"><p ></p></td>
             </tr>
             <tr>
                 <td>
                     <label class="with-middle" for="customer_type_id">Loại khách</label>
                 </td>
                 <td>
-                    <select class="with-large" id="customer_type_id" th:field="*{customerType}">
-                        <option th:each="customerType: ${customerTypes}" th:text="${customerType.getName()}"
-                                th:value="${customerType.getId()}"></option>
+                    <select class="with-large" id="customer_type_id" >
+                        <option></option>
                     </select>
                 </td>
             </tr>
@@ -96,7 +95,7 @@
                     <label class="with-middle" for="address_customer">Địa chỉ: </label>
                 </td>
                 <td>
-                    <input class="with-large" id="address_customer" th:field="*{address}">
+                    <input class="with-large" id="address_customer">
                 </td>
             </tr>
         </table>

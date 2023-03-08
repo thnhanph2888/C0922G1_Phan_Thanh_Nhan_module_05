@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Add Facility</title>
@@ -24,16 +24,16 @@
 
 <div class="d-flex justify-content-center mt-5">
     <form action="/facility/save" method="post">
-        <table class="table" th:object="${facility}">
+        <table class="table" >
             <tr>
                 <td>
                     <label>Loại dịch vụ: </label>
                 </td>
                 <td>
-                    <input th:field="*{id}" hidden>
-                    <input th:field="*{facilityType}" hidden>
-                    <input  th:value="*{facilityType.getName()}" readonly>
-                    <input id="facilityTypeId" th:value="*{facilityType.getId()}" hidden>
+                    <input hidden>
+                    <input hidden>
+                    <input  readonly>
+                    <input id="facilityTypeId"  hidden>
                 </td>
             </tr>
             <tr>
@@ -41,7 +41,7 @@
                     <label for="name">name: </label>
                 </td>
                 <td>
-                    <input th:field="*{name}" id="name" type="text" name="name_villa">
+                    <input id="name" type="text" name="name_villa">
                 </td>
             </tr>
             <tr>
@@ -49,7 +49,7 @@
                     <label for="area_villa">Diện tích sử dụng: </label>
                 </td>
                 <td>
-                    <input th:field="*{area}" id="area_villa" type="text" name="area_villa">
+                    <input  id="area_villa" type="text" name="area_villa">
                 </td>
             </tr>
             <tr>
@@ -57,7 +57,7 @@
                     <label for="cost_villa">Chi phí thuê: </label>
                 </td>
                 <td>
-                    <input th:field="*{cost}" id="cost_villa" type="text" name="cost_villa">
+                    <input  id="cost_villa" type="text" name="cost_villa">
                 </td>
             </tr>
             <tr>
@@ -65,7 +65,7 @@
                     <label for="maxPeople">Số lượng người tối đa: </label>
                 </td>
                 <td>
-                    <input th:field="*{maxPeople}" id="maxPeople" type="text" name="max_people_villa">
+                    <input id="maxPeople" type="text" name="max_people_villa">
                 </td>
             </tr>
             <tr>
@@ -73,9 +73,8 @@
                     <label for="rentType">Kiểu thuê: </label>
                 </td>
                 <td>
-                    <select th:field="*{rentType}" id="rentType" type="text" name="rent_type_id_villa">
-                        <option th:each="rentType : ${rentTypes}" th:text="${rentType.getName()}"
-                                th:value="${rentType.getId()}"></option>
+                    <select  id="rentType" type="text" name="rent_type_id_villa">
+                        <option ></option>
                     </select>
                 </td>
             </tr>
@@ -84,7 +83,7 @@
                     <label for="standardRoom">Tiêu chuẩn phòng: </label>
                 </td>
                 <td>
-                    <input th:field="*{standardRoom}" id="standardRoom" type="text" name="standard_room_villa">
+                    <input  id="standardRoom" type="text" name="standard_room_villa">
                 </td>
             </tr>
             <tr id="doc">
@@ -92,7 +91,7 @@
                     <label for="descriptionOtherConvenience">Mô tả tiện nghi khác: </label>
                 </td>
                 <td>
-                    <input th:field="*{descriptionOtherConvenience}" id="descriptionOtherConvenience" type="text"
+                    <input id="descriptionOtherConvenience" type="text"
                            name="descriptionOtherConvenience">
                 </td>
             </tr>
@@ -101,7 +100,7 @@
                     <label for="poolArea">Diện tích hồ bơi: </label>
                 </td>
                 <td>
-                    <input th:field="*{poolArea}" id="poolArea" type="text" name="pool_area_villa">
+                    <input id="poolArea" type="text" name="pool_area_villa">
                 </td>
             </tr>
             <tr id="nof">
@@ -109,7 +108,7 @@
                     <label for="numberOfFloor">Số tầng: </label>
                 </td>
                 <td>
-                    <input th:field="*{numberOfFloors}" id="numberOfFloor" type="text" name="number_of_floors_villa">
+                    <input id="numberOfFloor" type="text" name="number_of_floors_villa">
                 </td>
             </tr>
             <tr  id="ff">
@@ -117,7 +116,7 @@
                     <label for="facilityFree">Dịch vụ miễn phí đi kèm: </label>
                 </td>
                 <td>
-                    <input th:field="*{facilityFree}" id="facilityFree" type="text"
+                    <input id="facilityFree" type="text"
                            name="number_of_floors_villa">
                 </td>
             </tr>

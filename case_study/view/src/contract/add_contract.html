@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <title>Customer</title>
@@ -16,14 +16,14 @@
 </div>
 
 <div class="d-flex justify-content-center mt-5">
-    <form action="/contract/save" method="post" th:object="${contractDto}">
+    <form action="/contract/save" method="post" >
         <table class="table">
             <tr>
                 <td>
                     <label class="with-middle" for="startDate">Ngày bắt đầu: </label>
                 </td>
                 <td>
-                    <input class="with-large " id="startDate" th:field="*{startDate}">
+                    <input class="with-large " id="startDate" >
                 </td>
             </tr>
             <tr>
@@ -31,7 +31,7 @@
                     <label class="with-middle" for="endDate">Ngày kết thúc: </label>
                 </td>
                 <td>
-                    <input class="with-large" id="endDate" th:field="*{endDate}">
+                    <input class="with-large" id="endDate">
                 </td>
             </tr>
             <tr>
@@ -39,7 +39,7 @@
                     <label class="with-middle" for="deposit">Tiền gửi: </label>
                 </td>
                 <td>
-                    <input class="with-large" id="deposit" th:field="*{deposit}">
+                    <input class="with-large" id="deposit" >
                 </td>
             </tr>
             <tr>
@@ -47,7 +47,7 @@
                     <label class="with-middle" for="totalMoney">Tổng tiền: </label>
                 </td>
                 <td>
-                    <input id="totalMoney" readonly class="with-large" th:field="*{totalMoney}">
+                    <input id="totalMoney" readonly class="with-large" >
                 </td>
             </tr>
             <tr>
@@ -55,9 +55,8 @@
                     Dịch vụ:
                 </td>
                 <td>
-                    <select onchange="setTotalMoneyAdd()" id="facilityId" th:field="*{facility}">
-                        <option th:each="facility : ${facilityList}" th:text="${facility.getName()}" ,
-                                th:value="${facility.getId()}"></option>
+                    <select onchange="setTotalMoneyAdd()" id="facilityId" >
+                        <option ></option>
                     </select>
                 </td>
             </tr>
@@ -66,9 +65,8 @@
                     Nhân viên:
                 </td>
                 <td>
-                    <select th:field="*{employee}">
-                        <option th:each="employee : ${employeeList}" th:text="${employee.getName()}" ,
-                                th:value="${employee.getId()}"></option>
+                    <select>
+                        <option ></option>
                     </select>
                 </td>
             </tr>
@@ -77,9 +75,8 @@
                     Khách hàng thuê dịch vụ:
                 </td>
                 <td>
-                    <select th:field="*{customer}">
-                        <option th:each="customer : ${customerList}" th:text="${customer.getName()}" ,
-                                th:value="${customer.getId()}"></option>
+                    <select>
+                        <option ></option>
                     </select>
                 </td>
             </tr>
@@ -98,7 +95,7 @@
             </tr>
             <tr>
                 <td>
-                    <a th:href="@{/contract}" class="btn btn-secondary">Hủy bỏ</a>
+                    <a class="btn btn-secondary">Hủy bỏ</a>
                 </td>
                 <td>
                     <button class="btn btn-success" type="submit">Tạo hợp đồng</button>
@@ -122,9 +119,7 @@
             </div>
             <div class="modal-body">
                 <select id="attachListAdd">
-                    <option th:each="attachFacility: ${listAttachFacility}"
-                            th:data-name="${attachFacility.getName()}"
-                            th:value="${attachFacility.getId()}" th:text="${attachFacility.getName()}"></option>
+                    <option ></option>
                 </select>
                 <input id='quality' placeholder='nhập số lượng..'>
             </div>
