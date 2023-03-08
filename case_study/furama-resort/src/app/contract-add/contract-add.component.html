@@ -1,0 +1,92 @@
+<div class="d-flex justify-content-center mt-5">
+  <h3>Add New Contract</h3>
+</div>
+<div class="d-flex justify-content-center mt-5">
+  <form action="/contract/save" method="post" >
+    <table class="table">
+      <tr>
+        <td>
+          <label class="with-middle" for="startDate">Ngày bắt đầu: </label>
+        </td>
+        <td>
+          <input class="with-large " id="startDate" >
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="with-middle" for="endDate">Ngày kết thúc: </label>
+        </td>
+        <td>
+          <input class="with-large" id="endDate">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="with-middle" for="deposit">Tiền gửi: </label>
+        </td>
+        <td>
+          <input class="with-large" id="deposit" >
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="with-middle" for="totalMoney">Tổng tiền: </label>
+        </td>
+        <td>
+          <input id="totalMoney" readonly class="with-large" >
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Dịch vụ:
+        </td>
+        <td>
+          <select onchange="setTotalMoneyAdd()" id="facilityId" >
+            <option ></option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Nhân viên:
+        </td>
+        <td>
+          <select>
+            <option ></option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Khách hàng thuê dịch vụ:
+        </td>
+        <td>
+          <select>
+            <option ></option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Dịch vụ đính kèm</td>
+        <td>
+          <button type="button" class="btn btn-success"
+                  data-bs-toggle="modal"
+                  data-bs-target="#addAttachFacility">
+            +
+          </button>
+          <div id="container">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="btn btn-secondary">Hủy bỏ</a>
+        </td>
+        <td>
+          <button class="btn btn-success" type="submit">Tạo hợp đồng</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>

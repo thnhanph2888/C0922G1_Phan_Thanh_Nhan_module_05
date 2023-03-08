@@ -1,0 +1,114 @@
+<div class="d-flex justify-content-center mt-5">
+  <h3>Add new facility</h3>
+</div>
+
+<div class="d-flex justify-content-center mt-5">
+  <form action="/facility/save" method="post">
+    <table class="table" >
+      <tr>
+        <td>
+          <label>Loại dịch vụ: </label>
+        </td>
+        <td>
+          <select id="facilityType" onchange="chooseForm()" >
+            <option></option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="name_villa">name: </label>
+        </td>
+        <td>
+          <input  id="name_villa" type="text" name="name_villa">
+        </td>
+      </tr>
+      <tr>
+        <td class="error" colspan="2" ></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="area_villa">Diện tích sử dụng: </label>
+        </td>
+        <td>
+          <input  id="area_villa" type="text" name="area_villa">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="cost_villa">Chi phí thuê: </label>
+        </td>
+        <td>
+          <input id="cost_villa" type="text" name="cost_villa">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="maxPeople">Số lượng người tối đa: </label>
+        </td>
+        <td>
+          <input id="maxPeople" type="text" name="max_people_villa">
+        </td>
+      </tr>
+      <tr>
+        <td class="error" colspan="2" ></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="rentType">Kiểu thuê: </label>
+        </td>
+        <td>
+          <select  id="rentType" type="text" name="rent_type_id_villa">
+            <option ></option>
+          </select>
+        </td>
+      </tr>
+      <tr id="st">
+        <td>
+          <label for="standardRoom">Tiêu chuẩn phòng: </label>
+        </td>
+        <td>
+          <input  id="standardRoom" type="text" name="standard_room_villa">
+        </td>
+      </tr>
+      <tr id="doc">
+        <td>
+          <label for="descriptionOtherConvenience">Mô tả tiện nghi khác: </label>
+        </td>
+        <td>
+          <input id="descriptionOtherConvenience" type="text"
+                 name="descriptionOtherConvenience">
+        </td>
+      </tr>
+      <tr id="pa">
+        <td>
+          <label for="poolArea">Diện tích hồ bơi: </label>
+        </td>
+        <td>
+          <input id="poolArea" type="text" name="pool_area_villa">
+        </td>
+      </tr>
+      <tr id="nof">
+        <td>
+          <label for="numberOfFloor">Số tầng: </label>
+        </td>
+        <td>
+          <input  id="numberOfFloor" type="text" name="number_of_floors_villa">
+        </td>
+      </tr>
+      <tr>
+        <td class="error" colspan="2" ></td>
+      </tr>
+      <tr  id="ff">
+        <td>
+          <label for="facilityFree">Dịch vụ miễn phí đi kèm: </label>
+        </td>
+        <td>
+          <input  id="facilityFree" type="text"
+                  name="number_of_floors_villa">
+        </td>
+      </tr>
+    </table>
+    <input class="btn btn-success" type="submit" value="Add">
+  </form>
+</div>

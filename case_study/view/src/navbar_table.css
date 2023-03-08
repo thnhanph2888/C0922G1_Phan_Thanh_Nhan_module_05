@@ -58,9 +58,14 @@
 
 .button {
     border-radius: 4px;
-    padding: 0.4ex;
-    background-color: rgba(0, 86, 9, 0.52);
-    color: white;
+    padding: 5px;
+    background-color: rgba(0, 71, 0, 0.8);
+    color: #ffffff;
+}
+
+.card {
+    background-color: rgba(156, 150, 47, 0.19);
+    box-shadow: 0 0 10px 0 rgba(201, 132, 28, 0.74);
 }
 
 .footer {
