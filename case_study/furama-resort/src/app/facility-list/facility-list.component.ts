@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {IFacility} from './facility';
 
 @Component({
   selector: 'app-facility-list',
@@ -7,7 +8,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FacilityListComponent implements OnInit {
 
-  constructor() { }
+  facilityList: Array<IFacility> = [
+    {
+      id: 1,
+      name: 'fac',
+      area: 2,
+      cost: 2,
+      maxPeople: 2,
+      rentTypeId: 1,
+      facilityTypeId: 2,
+      standardRoom: '5 sao',
+      descriptionOtherConvenience: 'phong don',
+      poolArea: 2,
+      numberOfFloors: 2,
+      facilityFree: 'dsf'
+    },
+    {
+      id: 2,
+      name: 'fac',
+      area: 2,
+      cost: 2,
+      maxPeople: 2,
+      rentTypeId: 1,
+      facilityTypeId: 2,
+      standardRoom: '5 sao',
+      descriptionOtherConvenience: 'phong don',
+      poolArea: 2,
+      numberOfFloors: 2,
+      facilityFree: 'dsf'
+    }
+  ];
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
