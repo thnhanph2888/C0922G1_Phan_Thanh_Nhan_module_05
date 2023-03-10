@@ -1,0 +1,27 @@
+
+<form class="row justify-content-center" [formGroup]="loginForm" (ngSubmit)="addUser()">
+  <div class="col-4 m-4 p-2 my-form border border-1 border-secondary rounded">
+    <h2 class="text-center">Register</h2>
+    <div class="my-input">
+      <label for="email">email</label>
+      <input type="text" formControlName="email" id="email" class="form-control my-input-shadow" >
+      <small class="text-danger" *ngIf="loginForm.controls.email.touched && loginForm.controls.email?.errors?.required" >Vui lòng không để trống</small>
+      <small class="text-danger" *ngIf="loginForm.controls.email.touched && loginForm.controls.email?.errors?.pattern" >Email phải đúng định dạng</small>
+    </div>
+
+    <div class="my-input">
+      <label for="password">password</label>
+      <input type="password" formControlName="password" id="password" class="form-control my-input-shadow" >
+      <small class="text-danger" *ngIf="loginForm.controls.password.touched && loginForm.controls.password?.errors?.required" >Vui lòng không để trống</small>
+      <small class="text-danger" *ngIf="loginForm.controls.password.touched && loginForm.controls.password?.errors?.minlength" >Mật khẩu phải có độ dài tối thiểu 6 kí tự</small>
+    </div>
+
+    <div class="float-end">
+      <input class="btn btn-success m-2" type="submit" value="Submit">
+    </div>
+
+  </div>
+
+</form>
+
+

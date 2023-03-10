@@ -1,0 +1,65 @@
+
+
+<form class="row justify-content-center" [formGroup]="registerFrom" (ngSubmit)="addUser()">
+  <div class="col-4 m-4 p-2 my-form border border-1 border-secondary rounded">
+    <h2 class="text-center">Register</h2>
+    <div class="my-input">
+      <label for="email">email</label>
+      <input type="text" formControlName="email" id="email" class="form-control my-input-shadow" >
+      <small class="text-danger" *ngIf="registerFrom.controls.email.touched && registerFrom.controls.email?.errors?.required" >Vui lòng không để trống</small>
+      <small class="text-danger" *ngIf="registerFrom.controls.email.touched && registerFrom.controls.email?.errors?.pattern" >Email phải đúng định dạng</small>
+    </div>
+
+    <div class="my-input">
+      <label for="password">password</label>
+      <input type="password" formControlName="password" id="password" class="form-control my-input-shadow" >
+      <small class="text-danger" *ngIf="registerFrom.controls.password.touched && registerFrom.controls.password?.errors?.required" >Vui lòng không để trống</small>
+      <small class="text-danger" *ngIf="registerFrom.controls.password.touched && registerFrom.controls.password?.errors?.minlength" >Mật khẩu phải có độ dài tối thiểu 6 kí tự</small>
+    </div>
+    <div class="my-input">
+      <label for="confirmPassword">confirm password</label>
+      <input type="password" formControlName="confirmPassword" id="confirmPassword" class="form-control my-input-shadow" >
+      <small class="text-danger" *ngIf="registerFrom.controls.confirmPassword.touched && registerFrom.controls.confirmPassword?.errors?.required" >Vui lòng không để trống</small>
+      <small class="text-danger" *ngIf="registerFrom.controls.confirmPassword.touched && registerFrom.controls.confirmPassword.value != registerFrom.controls.password.value" >Mật khẩu không khớp với mật khẩu đã tạo</small>
+    </div>
+    <div class="my-input">
+      <label for="country">country</label>
+      <select formControlName="country" id="country" class="form-control my-input-shadow" >
+        <option selected></option>
+        <option>Viet Nam</option>
+        <option>My</option>
+        <option>Nhat ban</option>
+      </select>
+      <small class="text-danger" *ngIf="registerFrom.controls.country.touched && registerFrom.controls.country?.errors?.required" >Vui lòng không để trống</small>
+    </div>
+    <div class="my-input">
+      <label for="age">age</label>
+      <input type="text" formControlName="age" id="age" class="form-control my-input-shadow" >
+      <small class="text-danger" *ngIf="registerFrom.controls.age.touched && registerFrom.controls.age?.errors?.min" >Tuổi phải lớn hơn 18</small>
+      <small class="text-danger" *ngIf="registerFrom.controls.age.touched && registerFrom.controls.age?.errors?.required" >Vui lòng không để trống</small>
+    </div>
+    <div class="my-input">
+      <label>gender</label>
+      <div>
+        <input class="m-1" type="radio" value="true" name="gender" formControlName="gender" id="male" >
+        <label for="male">Nam</label>
+        <input class="m-1" type="radio" value="false" name="gender" formControlName="gender" id="female"  >
+        <label for="female">Nữ</label>
+      </div>
+      <small class="text-danger" *ngIf="registerFrom.controls.gender?.errors?.required" >Vui lòng chọn giới tính</small>
+    </div>
+    <div class="my-input">
+      <label for="phone">phone</label>
+      <input type="text" formControlName="phone" id="phone" class="form-control my-input-shadow" placeholder="enter phone..">
+      <small class="text-danger" *ngIf="registerFrom.controls.phone.touched && registerFrom.controls.phone?.errors?.required" >Vui lòng không để trống</small>
+      <small class="text-danger" *ngIf="registerFrom.controls.phone.touched && registerFrom.controls.phone?.errors?.pattern" >Số điện thoại phải bắt đầu với +84, và theo sau là 9 đến 10 chữ số</small>
+    </div>
+    <div class="float-end">
+      <input class="btn btn-success m-2" type="submit" value="Submit">
+    </div>
+
+  </div>
+
+</form>
+
+
