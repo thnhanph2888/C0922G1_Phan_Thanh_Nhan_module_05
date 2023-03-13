@@ -1,0 +1,30 @@
+<h1>Product Update</h1>
+<form [formGroup]="productUpdateForm" (ngSubmit)="submit()">
+  <table>
+    <tr>
+      <td>id</td>
+      <td><input  formControlName="id" readonly></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td><input  type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>price</td>
+      <td><input  type="text" formControlName="price"></td>
+    </tr>
+    <tr>
+      <td>description</td>
+      <td><input  type="text" formControlName="description"></td>
+    </tr>
+    <tr>
+      <td><button type="submit">update</button></td>
+    </tr>
+    <tr>
+      <td><button routerLink="">delete</button></td>
+    </tr>
+  </table>
+</form>
+
+<p>{{productUpdate | json}}</p>
+

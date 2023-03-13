@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {IFacility} from './facility';
+import {Facility} from './facility';
 
 @Component({
   selector: 'app-facility-list',
@@ -8,12 +8,12 @@ import {IFacility} from './facility';
 })
 export class FacilityListComponent implements OnInit {
 
-  facilityList: Array<IFacility> = [
+  facilityList: Array<Facility> = [
     {
       id: 1,
       name: 'fac',
       area: 2,
-      cost: 2,
+      cost: 100,
       maxPeople: 2,
       rentTypeId: 1,
       facilityTypeId: 2,
@@ -25,9 +25,23 @@ export class FacilityListComponent implements OnInit {
     },
     {
       id: 2,
-      name: 'fac',
+      name: 'facility2',
       area: 2,
-      cost: 2,
+      cost: 130,
+      maxPeople: 2,
+      rentTypeId: 1,
+      facilityTypeId: 2,
+      standardRoom: '5 sao',
+      descriptionOtherConvenience: 'phong don',
+      poolArea: 2,
+      numberOfFloors: 2,
+      facilityFree: 'dsf'
+    } ,
+    {
+      id: 2,
+      name: 'facility3',
+      area: 2,
+      cost: 230,
       maxPeople: 2,
       rentTypeId: 1,
       facilityTypeId: 2,

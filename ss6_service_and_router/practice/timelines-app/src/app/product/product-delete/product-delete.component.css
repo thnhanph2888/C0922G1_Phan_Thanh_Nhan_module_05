@@ -1,0 +1,14 @@
+.name {
+  color: red;
+  font-weight: bold;
+}
+
+span {
+  padding: 5px;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #4dcd4d;
+}

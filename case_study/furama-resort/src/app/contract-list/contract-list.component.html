@@ -9,21 +9,21 @@
     <th>Tiền đặt cọc</th>
     <th>Tổng tiền</th>
     <th>Các dịch vụ đi kèm</th>
-
   </tr>
-  <tr>
-    <td>ete</td>
-    <td>wer</td>
-    <td>wer</td>
-    <td>wer</td>
-    <td>wer</td>
-    <td>wer</td>
+  <tr *ngFor="let contract of contractList; index as i;">
+    <td>{{contract.facilityName}}</td>
+    <td>{{contract.customerName}}</td>
+    <td>{{contract.startDate}}</td>
+    <td>{{contract.endDate}}</td>
+    <td>{{contract.deposit}}</td>
+    <td></td>
     <td>
-      <button  type="button" data-bs-toggle="modal" data-bs-target="#addAttachFacility" class="btn btn-success">
+      <button type="button" data-bs-toggle="modal" data-bs-target="#addAttachFacility" class="btn btn-success">
         +
       </button>
       <span class="dropdown">
-                <button type="button" data-bs-toggle="modal" data-bs-target="#showListAttachFacility" class="btn btn-success" >
+                <button type="button" data-bs-toggle="modal" data-bs-target="#showListAttachFacility"
+                        class="btn btn-success">
                     Danh sách các dịch vụ đi kèm
                 </button>
             </span>
@@ -35,7 +35,7 @@
     Previous
   </a>
 
-  <span></span>/<span ></span>
+  <span></span>/<span></span>
 
   <a class="text-decoration-none button">
     Next

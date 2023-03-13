@@ -1,0 +1,18 @@
+<h2>List Word</h2>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Stt</th>
+    <th>Word</th>
+    <th>Detail</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let word of wordList; index as i;">
+    <td>{{i}}</td>
+    <td>{{word.word}}</td>
+    <td class="btn" [routerLink]="['/dictionary', word.word]">Detail</td>
+  </tr>
+  </tbody>
+</table>
