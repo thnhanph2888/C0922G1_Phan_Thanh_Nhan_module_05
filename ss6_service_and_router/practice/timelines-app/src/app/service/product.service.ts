@@ -1,69 +1,33 @@
 import {Injectable} from '@angular/core';
 import {Product} from "../model/product";
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-
-  constructor() {
+  API = 'http://localhost:3000/products';
+  constructor(private httpClient: HttpClient) {
   }
 
-  products: Product[] = [
-    {
-      id: 1,
-      name: 'IPhone 12',
-      price: 2400000,
-      description: 'New'
-    },
-    {
-      id: 2,
-      name: 'IPhone 11',
-      price: 1560000,
-      description: 'Like new'
-    },
-    {
-      id: 3,
-      name: 'IPhone X',
-      price: 968000,
-      description: '97%'
-    },
-    {
-      id: 4,
-      name: 'IPhone 8',
-      price: 7540000,
-      description: '98%'
-    },
-    {
-      id: 5,
-      name: 'IPhone 11 Pro',
-      price: 1895000,
-      description: 'Like new'
-    }];
-
-  getAll() {
-    return this.products;
+  getAll(): Observable<Product[]> {
+    return this.httpClient.get<Product[]>(this.API);
   }
 
-  saveProduct(product) {
-    this.products.push(product);
+  saveProduct(product): Observable<Product> {
+    return this.httpClient.post<Product>(this.API, product);
   }
 
-  update(productUpdate){
-    this.products = this.products.map(item => {
-      if(productUpdate.id === item.id){
-        return productUpdate;
-      }else {
-        return item;
-      }
-    })
+  update(id: number, productUpdate: Product): Observable<Product>{
+      return this.httpClient.put<Product>(this.API + '/' + id, productUpdate);
   }
 
-  findById(id: number): Product{
-   return this.products.filter(product => product.id == id)[0];
+  findById(id: number): Observable<Product> {
+    return this.httpClient.get<Product>(this.API + '?id=' + id);
   }
 
-  delete(id: number){
-    return this.products = this.products.filter(product => product.id !== id)
+  delete(id: number): Observable<Product>{
+    return this.httpClient.delete<Product>(this.API + '/' + id);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ProductService} from "../../service/product.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Product} from "../../model/product";
@@ -10,20 +10,27 @@ import {Product} from "../../model/product";
 })
 export class ProductDeleteComponent implements OnInit {
   product: Product;
+  id: number
   constructor(private productService: ProductService,
               private activatedRoute: ActivatedRoute,
-              private router: Router) { }
+              private router: Router) {
+  }
 
   ngOnInit(): void {
-    this.activatedRoute.paramMap.subscribe(param => {
-      const id = parseInt(param.get('id'), 10);
-      console.log(id)
-      this.product = this.productService.findById(id);
-    })
+    this.activatedRoute.paramMap.subscribe((paramMap) => {
+      this.id = parseInt(paramMap.get('id'), 10);
+    });
+    this.productService.findById(this.id).subscribe((product) => {
+      console.log(product.name)
+      this.product = product;
+    });
+
   }
-  delete(id) {
-    this.productService.delete(parseInt(id));
-    this.router.navigateByUrl("/product/list");
+
+  delete() {
+    this.productService.delete(this.id).subscribe(() => {
+      this.router.navigateByUrl("/product/list");
+    });
   }
 
   cancel() {

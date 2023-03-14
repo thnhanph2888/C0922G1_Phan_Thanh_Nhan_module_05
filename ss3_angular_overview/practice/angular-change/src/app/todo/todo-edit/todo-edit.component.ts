@@ -29,7 +29,7 @@ export class TodoEditComponent implements OnInit {
       this.id = parseInt(paramMap.get('id'), 10);
     });
     this.todoService.update(this.id, this.formEditToto.value).subscribe(() => {
-       this.router.navigateByUrl('/todo');
+      this.router.navigateByUrl('/todo');
     });
   }
 }

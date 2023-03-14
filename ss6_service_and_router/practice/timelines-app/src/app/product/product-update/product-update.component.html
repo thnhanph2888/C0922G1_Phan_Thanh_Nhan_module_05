@@ -1,30 +1,28 @@
-<h1>Product Update</h1>
-<form [formGroup]="productUpdateForm" (ngSubmit)="submit()">
+<h1>Cập nhật thông tin sản phẩm</h1>
+<form [formGroup]="productForm" (ngSubmit)="updateProduct(id)">
   <table>
     <tr>
-      <td>id</td>
-      <td><input  formControlName="id" readonly></td>
+      <td>Tên sản phẩm:</td>
+      <td><input type="text" formControlName="name"></td>
     </tr>
     <tr>
-      <td>name</td>
-      <td><input  type="text" formControlName="name"></td>
+      <td>Giá sản phẩm</td>
+      <td><input type="number" formControlName="price"></td>
     </tr>
     <tr>
-      <td>price</td>
-      <td><input  type="text" formControlName="price"></td>
+      <td>Mô tả về sản phẩm</td>
+      <td><input type="text" formControlName="description"></td>
     </tr>
     <tr>
-      <td>description</td>
-      <td><input  type="text" formControlName="description"></td>
+      <td>Danh mục sản phẩm</td>
+      <td><select formControlName="category">
+        <option disabled>Chọn danh mục sản phẩm</option>
+        <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+      </select></td>
     </tr>
     <tr>
-      <td><button type="submit">update</button></td>
-    </tr>
-    <tr>
-      <td><button routerLink="">delete</button></td>
+      <td></td>
+      <td><button>Cập nhật</button></td>
     </tr>
   </table>
 </form>
-
-<p>{{productUpdate | json}}</p>
-

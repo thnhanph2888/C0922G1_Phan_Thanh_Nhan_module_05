@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "xe dap",
+      "price": "1800",
+      "description": "mau den",
+      "category": {
+        "id": 1,
+        "name": "phuong tien"
+      }
+    },
+    {
+      "id": 32,
+      "name": "123",
+      "price": 123,
+      "description": "123",
+      "category": "2"
+    },
+    {
+      "id": 232,
+      "name": "13213",
+      "price": 123,
+      "description": "123",
+      "category": "2"
+    },
+    {
+      "id": 324,
+      "name": "dsaf",
+      "price": 3242,
+      "description": "af",
+      "category": "gia dung"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "phuong tien"
+    },
+    {
+      "id": 2,
+      "name": "gia dung"
+    },
+    {
+      "id": 3,
+      "name": "dien tu"
+    }
+  ]
+}
