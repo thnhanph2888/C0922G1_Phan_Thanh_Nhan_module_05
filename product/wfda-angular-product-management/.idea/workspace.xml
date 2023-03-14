@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="03fb7ab2-8f39-4d03-b2d4-c57309aeb0a6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../ss3_angular_overview/practice/angular-change/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C0922G1_Phan_Thanh_Nhan_Module_04" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/contract-list/contract-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/contract-list/contract-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/contract-list/contract.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/model/contract.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/customer-list/customer-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/customer-list/customer-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/customer-list/customer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/model/customer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/facility-list/facility-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/facility-list/facility-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/facility-list/facility.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/model/facility.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3_angular_overview/practice/angular-change/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss3_angular_overview/practice/angular-change/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3_angular_overview/practice/angular-change/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss3_angular_overview/practice/angular-change/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3_angular_overview/practice/angular-change/src/app/service/date-util.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss3_angular_overview/practice/angular-change/src/app/service/date-util.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3_angular_overview/practice/angular-change/src/app/todo/todo.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3_angular_overview/practice/angular-change/src/app/todo/todo.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3_angular_overview/practice/angular-change/src/app/todo/todo.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3_angular_overview/practice/angular-change/src/app/todo/todo.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3_angular_overview/practice/angular-change/src/app/todo/todo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss3_angular_overview/practice/angular-change/src/app/todo/todo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6_service_and_router/practice/timelines-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss6_service_and_router/practice/timelines-app/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6_service_and_router/practice/timelines-app/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss6_service_and_router/practice/timelines-app/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6_service_and_router/practice/timelines-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss6_service_and_router/practice/timelines-app/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6_service_and_router/practice/timelines-app/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss6_service_and_router/practice/timelines-app/src/environments/environment.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/thnhanph2888/C0922G1_Phan_Thanh_Nhan_module_05.git" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="2N06k118L68SB8GwZI1RFfQH1sM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="03fb7ab2-8f39-4d03-b2d4-c57309aeb0a6" name="Default Changelist" comment="" />
+      <created>1678788791850</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678788791850</updated>
+      <workItem from="1678788793578" duration="46000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

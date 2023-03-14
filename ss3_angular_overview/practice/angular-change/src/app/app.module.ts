@@ -10,16 +10,17 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { ColorPickerComponent } from './color-picker/color-picker.component';
 import { ArticleComponent } from './article/article.component';
 import { LikeComponent } from './like/like.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
-import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { RatingChildComponent } from './rating-child/rating-child.component';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
-import { TodoComponent } from './todo/todo.component';
 import { RegisterComponent } from './register/register.component';
 import { FormLoginComponent } from './form-login/form-login.component';
 import { TimelinesComponent } from './timelines/timelines.component';
+import {HttpClientModule} from '@angular/common/http';
+import { TodoDeleteComponent } from './todo/todo-delete/todo-delete.component';
+import { TodoListComponent } from './todo/todo-list/todo-list.component';
+import { TodoEditComponent } from './todo/todo-edit/todo-edit.component';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -31,21 +32,22 @@ import { TimelinesComponent } from './timelines/timelines.component';
     ColorPickerComponent,
     ArticleComponent,
     LikeComponent,
-    NavbarComponent,
-    FooterComponent,
-    NameCardComponent,
     ProgressBarComponent,
     RatingChildComponent,
     CountdownTimerComponent,
-    TodoComponent,
     RegisterComponent,
     FormLoginComponent,
-    TimelinesComponent
+    TimelinesComponent,
+    TodoDeleteComponent,
+    TodoListComponent,
+    TodoEditComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,6 +13,14 @@ import {ProductDeleteComponent} from "./product/product-delete/product-delete.co
 
 const routes: Routes = [
   {
+    path: 'product',
+    loadChildren: () => import('./product/product.module').then(module => module.ProductModule)
+  },
+  {
+    path: 'category',
+    loadChildren: () => import('./category/category.module').then(module => module.CategoryModule)
+  },
+  {
     path: 'product/delete/:id',
     component: ProductDeleteComponent
   },

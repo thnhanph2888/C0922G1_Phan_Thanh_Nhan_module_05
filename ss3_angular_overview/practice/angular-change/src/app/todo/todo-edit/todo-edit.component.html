@@ -1,0 +1,29 @@
+<h2>Edit Todo</h2>
+<form [formGroup]="formEditToto" (ngSubmit)="submit()">
+  <table>
+    <tr>
+      <td>content</td>
+      <td>
+        <input type="text" formControlName="content">
+      </td>
+    </tr>
+    <tr>
+      <td>content</td>
+      <td>
+        <label for="true">
+          true
+        </label>
+        <input id="true" type="radio" value="true" formControlName="complete">
+        <label for="false">
+          false
+        </label>
+        <input id="false" type="radio" value="false" formControlName="complete">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button type="submit">submit</button>
+      </td>
+    </tr>
+  </table>
+</form>
