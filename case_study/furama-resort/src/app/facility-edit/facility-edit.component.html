@@ -3,33 +3,56 @@
 </div>
 
 <div class="d-flex justify-content-center mt-5">
-  <form action="/facility/save" method="post">
-    <table class="table" >
+  <form [formGroup]="formEditFacility">
+    <table class="table">
       <tr>
         <td>
           <label>Loại dịch vụ: </label>
         </td>
         <td>
-          <input hidden>
-          <input hidden>
-          <input  readonly>
-          <input id="facilityTypeId"  hidden>
+          <select formControlName="facilityType" id="facilityType">
+            <option></option>
+          </select>
         </td>
       </tr>
       <tr>
         <td>
-          <label for="name">name: </label>
+          <small
+            *ngIf="formEditFacility.controls.facilityType.touched && formEditFacility.controls.facilityType?.errors?.required">thông
+            tin này không thể để trống</small>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="name_villa">name: </label>
         </td>
         <td>
-          <input id="name" type="text" name="name_villa">
+          <input formControlName="name" id="name_villa" type="text" name="name_villa">
         </td>
+      </tr>
+      <tr>
+        <td>
+          <small *ngIf="formEditFacility.controls.name.touched && formEditFacility.controls.name?.errors?.required">thông
+            tin này không thể để trống</small>
+          <small *ngIf="formEditFacility.controls.name.touched && formEditFacility.controls.name?.errors?.pattern">tên
+            dịch vụ không được chứa số</small>
+        </td>
+      </tr>
+      <tr>
+        <td class="error" colspan="2"></td>
       </tr>
       <tr>
         <td>
           <label for="area_villa">Diện tích sử dụng: </label>
         </td>
         <td>
-          <input  id="area_villa" type="text" name="area_villa">
+          <input formControlName="area" id="area_villa" type="text" name="area_villa">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <small *ngIf="formEditFacility.controls.area.touched && formEditFacility.controls.area?.errors?.required">thông
+            tin này không thể để trống</small>
         </td>
       </tr>
       <tr>
@@ -37,7 +60,13 @@
           <label for="cost_villa">Chi phí thuê: </label>
         </td>
         <td>
-          <input  id="cost_villa" type="text" name="cost_villa">
+          <input formControlName="cost" id="cost_villa" type="text" name="cost_villa">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <small *ngIf="formEditFacility.controls.cost.touched && formEditFacility.controls.cost?.errors?.required">thông
+            tin này không thể để trống</small>
         </td>
       </tr>
       <tr>
@@ -45,7 +74,14 @@
           <label for="maxPeople">Số lượng người tối đa: </label>
         </td>
         <td>
-          <input id="maxPeople" type="text" name="max_people_villa">
+          <input formControlName="maxPeople" id="maxPeople" type="text" name="max_people_villa">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <small
+            *ngIf="formEditFacility.controls.maxPeople.touched && formEditFacility.controls.maxPeople?.errors?.required">thông
+            tin này không thể để trống</small>
         </td>
       </tr>
       <tr>
@@ -53,8 +89,8 @@
           <label for="rentType">Kiểu thuê: </label>
         </td>
         <td>
-          <select  id="rentType" type="text" name="rent_type_id_villa">
-            <option ></option>
+          <select formControlName="rentType" id="rentType" name="rent_type_id_villa">
+            <option></option>
           </select>
         </td>
       </tr>
@@ -63,7 +99,14 @@
           <label for="standardRoom">Tiêu chuẩn phòng: </label>
         </td>
         <td>
-          <input  id="standardRoom" type="text" name="standard_room_villa">
+          <input formControlName="standardRoom" id="standardRoom" type="text" name="standard_room_villa">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <small
+            *ngIf="formEditFacility.controls.standardRoom.touched && formEditFacility.controls.standardRoom?.errors?.required">thông
+            tin này không thể để trống</small>
         </td>
       </tr>
       <tr id="doc">
@@ -71,8 +114,15 @@
           <label for="descriptionOtherConvenience">Mô tả tiện nghi khác: </label>
         </td>
         <td>
-          <input id="descriptionOtherConvenience" type="text"
+          <input formControlName="descriptionOtherConvenience" id="descriptionOtherConvenience" type="text"
                  name="descriptionOtherConvenience">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <small
+            *ngIf="formEditFacility.controls.descriptionOtherConvenience.touched && formEditFacility.controls.descriptionOtherConvenience?.errors?.required">thông
+            tin này không thể để trống</small>
         </td>
       </tr>
       <tr id="pa">
@@ -80,7 +130,16 @@
           <label for="poolArea">Diện tích hồ bơi: </label>
         </td>
         <td>
-          <input id="poolArea" type="text" name="pool_area_villa">
+          <input formControlName="poolArea" id="poolArea" type="text" name="pool_area_villa">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <small
+            *ngIf="formEditFacility.controls.poolArea.touched && formEditFacility.controls.poolArea?.errors?.required">thông
+            tin này không thể để trống</small>
+          <small *ngIf="formEditFacility.controls.poolArea.touched && formEditFacility.controls.poolArea?.errors?.min">diện
+            tích hồ bơi phải là số nguyên dương</small>
         </td>
       </tr>
       <tr id="nof">
@@ -88,16 +147,36 @@
           <label for="numberOfFloor">Số tầng: </label>
         </td>
         <td>
-          <input id="numberOfFloor" type="text" name="number_of_floors_villa">
+          <input formControlName="numberOfFloor" id="numberOfFloor" type="text" name="number_of_floors_villa">
         </td>
       </tr>
-      <tr  id="ff">
+      <tr>
+        <td>
+          <small
+            *ngIf="formEditFacility.controls.numberOfFloor.touched && formEditFacility.controls.numberOfFloor?.errors?.required">thông
+            tin này không thể để trống</small>
+          <small
+            *ngIf="formEditFacility.controls.numberOfFloor.touched && formEditFacility.controls.numberOfFloor?.errors?.min">số
+            tầng phải là số nguyên dương</small>
+        </td>
+      </tr>
+      <tr>
+        <td class="error" colspan="2"></td>
+      </tr>
+      <tr id="ff">
         <td>
           <label for="facilityFree">Dịch vụ miễn phí đi kèm: </label>
         </td>
         <td>
-          <input id="facilityFree" type="text"
+          <input formControlName="facilityFree" id="facilityFree" type="text"
                  name="number_of_floors_villa">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <small
+            *ngIf="formEditFacility.controls.facilityFree.touched && formEditFacility.controls.facilityFree?.errors?.required">thông
+            tin này không thể để trống</small>
         </td>
       </tr>
     </table>

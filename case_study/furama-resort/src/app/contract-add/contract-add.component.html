@@ -2,14 +2,19 @@
   <h3>Add New Contract</h3>
 </div>
 <div class="d-flex justify-content-center mt-5">
-  <form action="/contract/save" method="post" >
+  <form [formGroup]="formAddContract" >
     <table class="table">
       <tr>
         <td>
           <label class="with-middle" for="startDate">Ngày bắt đầu: </label>
         </td>
         <td>
-          <input class="with-large " id="startDate" >
+          <input formControlName="startDate" class="with-large " id="startDate" >
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <small *ngIf="formAddContract.controls.startDate.touched && formAddContract.controls.startDate?.errors?.pattern">Ngày tháng phải đúng định dạng DD/MM/YYYY</small>
         </td>
       </tr>
       <tr>
@@ -17,7 +22,12 @@
           <label class="with-middle" for="endDate">Ngày kết thúc: </label>
         </td>
         <td>
-          <input class="with-large" id="endDate">
+          <input formControlName="endDate" class="with-large" id="endDate">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <small *ngIf="formAddContract.controls.endDate.touched && formAddContract.controls.endDate?.errors?.pattern">Ngày tháng phải đúng định dạng DD/MM/YYYY</small>
         </td>
       </tr>
       <tr>
@@ -25,15 +35,12 @@
           <label class="with-middle" for="deposit">Tiền gửi: </label>
         </td>
         <td>
-          <input class="with-large" id="deposit" >
+          <input formControlName="deposit" class="with-large" id="deposit" >
         </td>
       </tr>
       <tr>
         <td>
-          <label class="with-middle" for="totalMoney">Tổng tiền: </label>
-        </td>
-        <td>
-          <input id="totalMoney" readonly class="with-large" >
+          <small *ngIf="formAddContract.controls.deposit.touched && formAddContract.controls.deposit?.errors?.min">Tiền gửi phải là số nguyên dương</small>
         </td>
       </tr>
       <tr>
@@ -41,7 +48,7 @@
           Dịch vụ:
         </td>
         <td>
-          <select onchange="setTotalMoneyAdd()" id="facilityId" >
+          <select formControlName="facilityName" onchange="setTotalMoneyAdd()" id="facilityId" >
             <option ></option>
           </select>
         </td>
@@ -51,7 +58,7 @@
           Nhân viên:
         </td>
         <td>
-          <select>
+          <select formControlName="employeeName">
             <option ></option>
           </select>
         </td>
@@ -61,7 +68,7 @@
           Khách hàng thuê dịch vụ:
         </td>
         <td>
-          <select>
+          <select  formControlName="customerName">
             <option ></option>
           </select>
         </td>
