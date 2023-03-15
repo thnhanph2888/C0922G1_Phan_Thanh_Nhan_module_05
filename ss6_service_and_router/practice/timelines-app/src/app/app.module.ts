@@ -10,6 +10,7 @@ import { DictionaryPageComponent } from './dictionary/dictionary-page/dictionary
 import { DictionaryDetailComponent } from './dictionary/dictionary-detail/dictionary-detail.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { HttpClientModule} from "@angular/common/http";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule} from "@angular/common/http";
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

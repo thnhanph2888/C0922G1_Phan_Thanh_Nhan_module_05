@@ -21,6 +21,8 @@ import { TodoDeleteComponent } from './todo/todo-delete/todo-delete.component';
 import { TodoListComponent } from './todo/todo-list/todo-list.component';
 import { TodoEditComponent } from './todo/todo-edit/todo-edit.component';
 import {AppRoutingModule} from './app-routing.module';
+import {ImageGalleryModule} from './image-gallery/image-gallery.module';
+import {GalleryConfig} from './image-gallery/token';
 
 @NgModule({
   declarations: [
@@ -47,9 +49,12 @@ import {AppRoutingModule} from './app-routing.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ImageGalleryModule
   ],
-  providers: [],
+  providers: [
+    {provide: GalleryConfig, useValue: 3}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

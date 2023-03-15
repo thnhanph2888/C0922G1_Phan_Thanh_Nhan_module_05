@@ -1,6 +1,11 @@
+<app-header></app-header>
+<div>
+  <app-navigation></app-navigation>
+</div>
+
 <h1 class="row">
   <div class="col-lg-2">
-    <a class="btn btn-success" href="/customer/showAdd">add</a>
+    <a class="btn btn-success">add</a>
   </div>
 
   <p class="col-lg-6" >CustomerList</p>
@@ -50,3 +55,26 @@
     Next
   </a>
 </div>
+<br>
+<br>
+<app-footer></app-footer>
+<div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Delete</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+        <div class="modal-body">
+          <input hidden id="idDelete" name="idDelete">
+          <span>Bạn có chắc chắn muốn xóa</span>
+          <span class="text-danger" id="nameDelete"></span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </div>
+    </div>
+  </div>
+</div>
+

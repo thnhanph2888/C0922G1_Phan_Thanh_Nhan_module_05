@@ -1,8 +1,9 @@
+<p>customer-add works!</p>
 <div class="d-flex justify-content-center mt-5">
-  <h3>Update Customer</h3>
+  <h3>Add New Customer</h3>
 </div>
 <div class="d-flex justify-content-center mt-5">
-  <form [formGroup]="formEditCustomer">
+  <form [formGroup]="formAddCustomer">
     <table class="table">
       <tr>
         <td>
@@ -15,7 +16,7 @@
       <tr>
         <td>
           <small class="text-danger"
-                 *ngIf="formEditCustomer.controls.id.touched && formEditCustomer.controls.id?.errors?.pattern">
+                 *ngIf="formAddCustomer.controls.id.touched && formAddCustomer.controls.id?.errors?.pattern">
             Mã khách hàng phải đúng định dạng là KH-XXXX (X là số từ 0-9)</small>
         </td>
       </tr>
@@ -35,13 +36,13 @@
           <label class="with-middle" for="birthday_customer">Ngày sinh: </label>
         </td>
         <td>
-          <input formControlName="dateOfBirth" class="with-large" id="birthday_customer">
+          <input type="date" formControlName="dateOfBirth" class="with-large" id="birthday_customer">
         </td>
       </tr>
       <tr>
         <td>
           <small class="text-danger"
-                 *ngIf="formEditCustomer.controls.dateOfBirth.touched && formEditCustomer.controls.dateOfBirth?.errors?.pattern">
+                 *ngIf="formAddCustomer.controls.dateOfBirth.touched && formAddCustomer.controls.dateOfBirth?.errors?.pattern">
             ngày sinh phải đúng định dạng ngày giờ theo format DD/MM/YYYY</small>
         </td>
       </tr>
@@ -67,7 +68,7 @@
       <tr>
         <td>
           <small class="text-danger"
-                 *ngIf="formEditCustomer.controls.idCard.touched && formEditCustomer.controls.idCard?.errors?.pattern">
+                 *ngIf="formAddCustomer.controls.idCard.touched && formAddCustomer.controls.idCard?.errors?.pattern">
             Số CMND phải đúng định dạng XXXXXXXXX hoặc XXXXXXXXXXXX (X là số 0-9)</small>
         </td>
       </tr>
@@ -82,7 +83,7 @@
       <tr>
         <td>
           <small class="text-danger"
-                 *ngIf="formEditCustomer.controls.phoneNumber.touched && formEditCustomer.controls.phoneNumber?.errors?.pattern">
+                 *ngIf="formAddCustomer.controls.phoneNumber.touched && formAddCustomer.controls.phoneNumber?.errors?.pattern">
             Số điện thoại phải đúng định dạng 090xxxxxxx hoặc 091xxxxxxx hoặc (84)+90xxxxxxx hoặc (84)+91xxxxxxx</small>
         </td>
       </tr>
@@ -100,7 +101,7 @@
       <tr>
         <td>
           <small class="text-danger"
-                 *ngIf="formEditCustomer.controls.email.touched && formEditCustomer.controls.email?.errors?.pattern">
+                 *ngIf="formAddCustomer.controls.email.touched && formAddCustomer.controls.email?.errors?.pattern">
             Địa chỉ email phải đúng format</small>
         </td>
       </tr>
@@ -126,6 +127,6 @@
         </td>
       </tr>
     </table>
-    <input class="btn btn-success" type="submit" value="update">
+    <input class="btn btn-success" type="submit" value="add">
   </form>
 </div>

@@ -3,7 +3,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 import {ProductService} from "../../service/product.service";
 import {CategoryService} from "../../service/category.service";
 import {Category} from "../../model/category";
-import {Router} from "@angular/router";
+import {Router} from "@angular/router"
 
 @Component({
   selector: 'app-product-create',
@@ -40,5 +40,4 @@ export class ProductCreateComponent implements OnInit {
         this.router.navigateByUrl('/product/list')
     });
   }
-
 }

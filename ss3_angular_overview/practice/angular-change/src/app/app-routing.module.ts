@@ -6,6 +6,10 @@ import {TodoEditComponent} from './todo/todo-edit/todo-edit.component';
 
 const routes: Routes = [
   {
+    path: 'img',
+    loadChildren: () => import('./img-slider/img-slider.module').then(module => module.ImgSliderModule)
+  },
+  {
     path: 'todo',
     component: TodoListComponent
   },

@@ -30,6 +30,20 @@
       "price": 3242,
       "description": "af",
       "category": "gia dung"
+    },
+    {
+      "id": 65,
+      "name": "56",
+      "price": 56,
+      "description": "56",
+      "category": "gia dung"
+    },
+    {
+      "id": 23,
+      "name": "23",
+      "price": 23,
+      "description": "23",
+      "category": "phuong tien"
     }
   ],
   "categories": [
@@ -44,6 +58,30 @@
     {
       "id": 3,
       "name": "dien tu"
+    },
+    {
+      "id": 4,
+      "name": "eq"
+    },
+    {
+      "id": 5,
+      "name": "eq"
+    },
+    {
+      "id": 6,
+      "name": "eq"
+    },
+    {
+      "id": 7,
+      "name": "eqafds"
+    },
+    {
+      "id": 8,
+      "name": "eqafds"
+    },
+    {
+      "id": 9,
+      "name": "eqafds"
     }
   ]
 }

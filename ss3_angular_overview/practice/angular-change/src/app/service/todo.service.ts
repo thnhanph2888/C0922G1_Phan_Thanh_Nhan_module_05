@@ -29,7 +29,7 @@ export class TodoService {
       content: todoUpdate.content,
       complete
     };
-    return this.httpClient.patch<Todo>(this.API + '/' + id, todo);
+    return this.httpClient.put<Todo>(this.API + '/' + id, todo);
   }
 
   findById(id): Observable<Todo> {

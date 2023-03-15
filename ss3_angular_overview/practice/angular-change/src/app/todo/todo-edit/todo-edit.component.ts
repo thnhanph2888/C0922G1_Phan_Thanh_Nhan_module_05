@@ -11,7 +11,6 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class TodoEditComponent implements OnInit {
   formEditToto: FormGroup;
   id: number;
-
   constructor(private todoService: TodoService,
               private activatedRoute: ActivatedRoute,
               private router: Router) {

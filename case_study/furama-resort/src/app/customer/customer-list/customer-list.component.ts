@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {Customer} from '../model/customer';
+import {Customer} from '../../model/customer';
 
 @Component({
   selector: 'app-customer-list',
   templateUrl: './customer-list.component.html',
   styleUrls: ['./customer-list.component.css']
 })
-export class CustomerListComponent implements OnInit {
+  export class CustomerListComponent implements OnInit {
   customerList: Array<Customer> = [
     {
       id: 1,
@@ -19,7 +19,7 @@ export class CustomerListComponent implements OnInit {
       email: 'thnhanph@gmail',
       address: 'gia lai, gia lai, vietnam'
     },
-     {
+    {
       id: 1,
       customerTypeId: 2,
       name: 'Phan Thanh Nhan',
@@ -30,7 +30,7 @@ export class CustomerListComponent implements OnInit {
       email: 'thnhanph@gmail',
       address: 'gia lai, gia lai, vietnam'
     },
-     {
+    {
       id: 1,
       customerTypeId: 2,
       name: 'Phan Thanh Nhan',
@@ -46,5 +46,4 @@ export class CustomerListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

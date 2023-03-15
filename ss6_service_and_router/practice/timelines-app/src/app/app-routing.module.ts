@@ -5,13 +5,13 @@ import {YoutubePlaylistComponent} from "./youtube-playlist/youtube-playlist.comp
 import {YoutubePlayerComponent} from "./youtube-player/youtube-player.component";
 import {DictionaryPageComponent} from "./dictionary/dictionary-page/dictionary-page.component";
 import {DictionaryDetailComponent} from "./dictionary/dictionary-detail/dictionary-detail.component";
-import {ProductListComponent} from "./product/product-list/product-list.component";
-import {ProductCreateComponent} from "./product/product-create/product-create.component";
-import {ProductUpdateComponent} from "./product/product-update/product-update.component";
-import {ProductDeleteComponent} from "./product/product-delete/product-delete.component";
 
 
 const routes: Routes = [
+  {
+    path: 'shared',
+    loadChildren: () => import ('./shared/shared.module').then(module => module.SharedModule)
+  },
   {
     path: 'product',
     loadChildren: () => import('./product/product.module').then(module => module.ProductModule)
@@ -19,22 +19,6 @@ const routes: Routes = [
   {
     path: 'category',
     loadChildren: () => import('./category/category.module').then(module => module.CategoryModule)
-  },
-  {
-    path: 'product/delete/:id',
-    component: ProductDeleteComponent
-  },
-  {
-    path: 'product/create',
-    component: ProductCreateComponent
-  },
-  {
-    path: 'product/update/:id',
-    component: ProductUpdateComponent
-  },
-  {
-    path: 'product/list',
-    component: ProductListComponent
   },
   {
     path: 'dictionary',
