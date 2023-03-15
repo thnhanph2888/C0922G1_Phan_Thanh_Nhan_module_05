@@ -37,7 +37,7 @@
       <a class="btn btn-success" >update</a>
     </td>
     <td>
-      <button  type="button"
+      <button (click)="setInfoDelete(customer.id, customer.name)"  type="button"
                class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete">
         Delete
       </button>
@@ -69,11 +69,11 @@
         <div class="modal-body">
           <input hidden id="idDelete" name="idDelete">
           <span>Bạn có chắc chắn muốn xóa</span>
-          <span class="text-danger" id="nameDelete"></span>
+          <span class="text-danger" id="nameDelete">{{nameDelete}}</span>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-danger">Delete</button>
+          <button type="submit" class="btn btn-danger" data-bs-dismiss="modal" (click)="delete()">Delete</button>
         </div>
     </div>
   </div>

@@ -1,0 +1,99 @@
+{
+  "contracts": [
+    {
+      "id": 1,
+      "startDate": "12-12-2023",
+      "endDate": "13-12-2023",
+      "deposit": 123,
+      "employeeName": "Phan Thanh Nhan",
+      "customerName": "Phan Thanh Nhan",
+      "facilityName": "Phan Thanh Nhan"
+    },
+    {
+      "id": 2,
+      "startDate": "12-12-2023",
+      "endDate": "13-12-2023",
+      "deposit": 123,
+      "employeeName": "Phan Thanh Nhan",
+      "customerName": "Phan Thanh Nhan",
+      "facilityName": "Phan Thanh Nhan"
+    },
+    {
+      "id": 3,
+      "startDate": "12-12-2023",
+      "endDate": "13-12-2023",
+      "deposit": 123,
+      "employeeName": "Phan Thanh Nhan",
+      "customerName": "Phan Thanh Nhan",
+      "facilityName": "Phan Thanh Nhan"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "customerTypeId": 2,
+      "name": "Phan Thanh Nhan",
+      "dateOfBirth": "2003",
+      "gender": true,
+      "idCard": "324",
+      "phoneNumber": 23423,
+      "email": "thnhanph@gmail",
+      "address": "gia lai, gia lai, vietnam"
+    },
+    {
+      "id": 2,
+      "customerTypeId": 2,
+      "name": "Phan Thanh Nhan",
+      "dateOfBirth": "2003",
+      "gender": true,
+      "idCard": "324",
+      "phoneNumber": 23423,
+      "email": "thnhanph@gmail",
+      "address": "gia lai, gia lai, vietnam"
+    }
+  ],
+  "facilities": [
+    {
+      "id": 1,
+      "name": "fac",
+      "area": 2,
+      "cost": 100,
+      "maxPeople": 2,
+      "rentTypeId": 1,
+      "facilityTypeId": 2,
+      "standardRoom": "5 sao",
+      "descriptionOtherConvenience": "phong don",
+      "poolArea": 2,
+      "numberOfFloors": 2,
+      "facilityFree": "dsf"
+    },
+    {
+      "id": 2,
+      "name": "fac",
+      "area": 2,
+      "cost": 100,
+      "maxPeople": 2,
+      "rentTypeId": 1,
+      "facilityTypeId": 2,
+      "standardRoom": "5 sao",
+      "descriptionOtherConvenience": "phong don",
+      "poolArea": 2,
+      "numberOfFloors": 2,
+      "facilityFree": "dsf"
+    },
+    {
+      "id": 3,
+      "name": "fac",
+      "area": 2,
+      "cost": 100,
+      "maxPeople": 2,
+      "rentTypeId": 1,
+      "facilityTypeId": 2,
+      "standardRoom": "5 sao",
+      "descriptionOtherConvenience": "phong don",
+      "poolArea": 2,
+      "numberOfFloors": 2,
+      "facilityFree": "dsf"
+    }
+  ]
+}

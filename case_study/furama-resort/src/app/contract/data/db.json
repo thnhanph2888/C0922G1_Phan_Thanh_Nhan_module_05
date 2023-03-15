@@ -1,0 +1,66 @@
+{
+  "contractList": [
+    {
+      "id": 1,
+      "startDate": "12-12-2023",
+      "endDate": "13-12-2023",
+      "deposit": 123,
+      "employeeName": "Phan Thanh Nhan",
+      "customerName": "Phan Thanh Nhan",
+      "facilityName": "Phan Thanh Nhan"
+    },
+    {
+      "id": 2,
+      "startDate": "12-12-2023",
+      "endDate": "13-12-2023",
+      "deposit": 123,
+      "employeeName": "Phan Thanh Nhan",
+      "customerName": "Phan Thanh Nhan",
+      "facilityName": "Phan Thanh Nhan"
+    },
+    {
+      "id": 3,
+      "startDate": "12-12-2023",
+      "endDate": "13-12-2023",
+      "deposit": 123,
+      "employeeName": "Phan Thanh Nhan",
+      "customerName": "Phan Thanh Nhan",
+      "facilityName": "Phan Thanh Nhan"
+    }
+  ],
+  "customerList": [
+    {
+      "id": 1,
+      "customerTypeId": 2,
+      "name": "Phan Thanh Nhan",
+      "dateOfBirth": "2003",
+      "gender": true,
+      "idCard": "324",
+      "phoneNumber": 23423,
+      "email": "thnhanph@gmail",
+      "address": "gia lai, gia lai, vietnam"
+    },
+    {
+      "id": 2,
+      "customerTypeId": 2,
+      "name": "Phan Thanh Nhan",
+      "dateOfBirth": "2003",
+      "gender": true,
+      "idCard": "324",
+      "phoneNumber": 23423,
+      "email": "thnhanph@gmail",
+      "address": "gia lai, gia lai, vietnam"
+    },
+    {
+      "id": 3,
+      "customerTypeId": 2,
+      "name": "Phan Thanh Nhan",
+      "dateOfBirth": "2003",
+      "gender": true,
+      "idCard": "324",
+      "phoneNumber": 23423,
+      "email": "thnhanph@gmail",
+      "address": "gia lai, gia lai, vietnam"
+    }
+  ]
+}

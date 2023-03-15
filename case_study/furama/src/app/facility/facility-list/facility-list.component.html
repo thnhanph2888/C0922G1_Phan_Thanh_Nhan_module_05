@@ -1,0 +1,51 @@
+<app-header></app-header>
+<app-navigation></app-navigation>
+<h2>Facility List</h2>
+<div class="row justify-content-center d-flex pt-4 pb-4">
+  <div class="col-12 row d-flex justify-content-center">
+
+    <div *ngFor="let facility of facilityList; index as i;" class="col-sm-3 mb-sm-0 m-4 p-0 ">
+      <div class="card">
+        <img class="rounded" width="100%" height="250"
+             src="https://empire-s3-production.bobvila.com/pages/538/original/Bedroom.jpg?1310503752"
+             alt="...">
+        <div class="card-body">
+          <div class="row">
+            <strong class="col-5 fs-3">{{facility.name}}</strong>
+          </div>
+          <p class="m-0 ">{{facility.descriptionOtherConvenience}}</p>
+          <div class="row ">
+            <div class="col-6 ">
+              <strong class="col-7 text-danger">{{facility.cost + '$'}}</strong>
+            </div>
+            <div class="col-6  text-center">
+              <a class="btn button">Edit</a>
+              <a (click)="setInfoDelete(facility.id, facility.name)" class="btn button" data-bs-toggle="modal" data-bs-target="#delete">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+
+<div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Delete</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input hidden id="idDelete" name="idDelete">
+        <span>Bạn có chắc chắn muốn xóa</span>
+        <span class="text-danger" id="nameDelete">{{nameDelete}}</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-danger" data-bs-dismiss="modal" (click)="delete()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
