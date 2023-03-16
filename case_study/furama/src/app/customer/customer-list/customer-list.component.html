@@ -1,14 +1,12 @@
 <app-header></app-header>
-<div>
-  <app-navigation></app-navigation>
-</div>
-
+<app-navigation></app-navigation>
+<br>
 <h1 class="row">
   <div class="col-lg-2">
-    <a class="btn btn-success">add</a>
+    <a class="btn btn-success" routerLink="/customer/add">add</a>
   </div>
 
-  <p class="col-lg-6" >CustomerList</p>
+  <p class="col-lg-6">CustomerList</p>
 </h1>
 <table id="table">
   <tr>
@@ -23,7 +21,7 @@
     <th>Address</th>
     <th colspan="2"></th>
   </tr>
-  <tr *ngFor="let customer of customerList; index as i;">
+  <tr *ngFor="let customer of customerList | paginate: { itemsPerPage: 1, currentPage: p}; index as i;">
     <td>{{i}}</td>
     <td>{{customer.name}}</td>
     <td>{{customer.customerTypeId}}</td>
@@ -34,27 +32,20 @@
     <td>{{customer.email}}</td>
     <td>{{customer.address}}</td>
     <td>
-      <a class="btn btn-success" >update</a>
+      <a class="btn btn-success" routerLink="/customer/edit/{{customer.id}}">edit</a>
     </td>
     <td>
-      <button (click)="setInfoDelete(customer.id, customer.name)"  type="button"
-               class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete">
+      <button (click)="setInfoDelete(customer.id, customer.name)" type="button"
+              class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete">
         Delete
       </button>
     </td>
   </tr>
 </table>
 <div class="page-control">
-  <a class="text-decoration-none button" >
-    Previous
-  </a>
-
-  <span></span>
-
-  <a class="text-decoration-none button">
-    Next
-  </a>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>
+<br>
 <br>
 <br>
 <app-footer></app-footer>
@@ -66,15 +57,15 @@
         <h1 class="modal-title fs-5" id="exampleModalLabel">Delete</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-        <div class="modal-body">
-          <input hidden id="idDelete" name="idDelete">
-          <span>Bạn có chắc chắn muốn xóa</span>
-          <span class="text-danger" id="nameDelete">{{nameDelete}}</span>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-danger" data-bs-dismiss="modal" (click)="delete()">Delete</button>
-        </div>
+      <div class="modal-body">
+        <input hidden id="idDelete" name="idDelete">
+        <span>Bạn có chắc chắn muốn xóa</span>
+        <span class="text-danger" id="nameDelete">{{nameDelete}}</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-danger" data-bs-dismiss="modal" (click)="delete()">Delete</button>
+      </div>
     </div>
   </div>
 </div>

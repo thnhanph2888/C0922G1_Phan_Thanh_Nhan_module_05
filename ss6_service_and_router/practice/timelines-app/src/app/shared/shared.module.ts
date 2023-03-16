@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {SharedRoutingModule} from "./shared-routing.module";
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [NavBarComponent],
@@ -10,7 +10,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
   ],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    RouterModule
   ]
 })
 export class SharedModule { }

@@ -17,7 +17,7 @@ export class CustomerService {
   }
 
   findById(id: number): Observable<Customer> {
-    return this.httpClient.get<Customer>(this.API + '?id=' + id);
+    return this.httpClient.get<Customer>(this.API + '/' + id);
   }
 
   add(customer: Customer): Observable<Customer> {

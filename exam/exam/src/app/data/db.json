@@ -1,0 +1,29 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Nhan",
+      "dayOfBirth": "02-02-2002",
+      "email": "emai@gmail.com",
+      "phone": 1122334232,
+      "customerType": {
+        "id": 1,
+        "name": "diamond"
+      }
+    }
+  ],
+  "customerTypes": [
+    {
+      "id": 1,
+      "name": "diamond"
+    },
+    {
+      "id": 2,
+      "name": "gold"
+    },
+    {
+      "id": 3,
+      "name": "silver"
+    }
+  ]
+}

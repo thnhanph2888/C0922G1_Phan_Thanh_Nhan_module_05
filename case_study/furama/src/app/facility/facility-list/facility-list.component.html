@@ -1,6 +1,16 @@
 <app-header></app-header>
 <app-navigation></app-navigation>
-<h2>Facility List</h2>
+<br>
+<div class="row" style="max-height: 350px; overflow: hidden;position: relative; text-align: center">
+  <img src="https://furamavietnam.com/wp-content/uploads/2018/11/Vietnam_Danang_Furama_Resort_Exterior-Lagoon-Pool.jpg" style="height: 100%;">
+  <p class="centered" style="position: absolute; top: 50%; font-family: '.VnCentury Schoolbook';
+    left: 50%; transform: translate(-50%, -50%); font-size: 50px;color: aliceblue">Facility List</p>
+</div>
+<h1 class="row">
+  <div class="col-lg-2">
+    <a class="btn btn-success">add</a>
+  </div>
+</h1>
 <div class="row justify-content-center d-flex pt-4 pb-4">
   <div class="col-12 row d-flex justify-content-center">
 
@@ -19,8 +29,9 @@
               <strong class="col-7 text-danger">{{facility.cost + '$'}}</strong>
             </div>
             <div class="col-6  text-center">
-              <a class="btn button">Edit</a>
-              <a (click)="setInfoDelete(facility.id, facility.name)" class="btn button" data-bs-toggle="modal" data-bs-target="#delete">Delete</a>
+              <a class="btn button" routerLink="/customer/edit/{{facility.id}}">Edit</a>
+              <a (click)="setInfoDelete(facility.id, facility.name)" class="btn button" data-bs-toggle="modal"
+                 data-bs-target="#delete">Delete</a>
             </div>
           </div>
         </div>
@@ -28,6 +39,9 @@
     </div>
   </div>
 </div>
+<br>
+<br>
+<br>
 <app-footer></app-footer>
 
 <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

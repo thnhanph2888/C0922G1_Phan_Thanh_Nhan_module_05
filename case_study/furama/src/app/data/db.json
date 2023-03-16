@@ -30,26 +30,36 @@
   ],
   "customers": [
     {
-      "id": 1,
-      "customerTypeId": 2,
-      "name": "Phan Thanh Nhan",
-      "dateOfBirth": "2003",
-      "gender": true,
-      "idCard": "324",
-      "phoneNumber": 23423,
-      "email": "thnhanph@gmail",
-      "address": "gia lai, gia lai, vietnam"
+      "code": "KH-2222",
+      "customerTypeId": "",
+      "name": "Nguyễn Mỹ Kim",
+      "dateOfBirth": "2023-03-02",
+      "gender": "false",
+      "idCard": "213112222",
+      "phoneNumber": "0912345698",
+      "email": "xuandieu92@gmail.com",
+      "address": "K77/22 Thái Phiên, Quảng Trị",
+      "customerType": {
+        "id": 2,
+        "name": "gold"
+      },
+      "id": 3
     },
     {
-      "id": 2,
-      "customerTypeId": 2,
-      "name": "Phan Thanh Nhan",
-      "dateOfBirth": "2003",
-      "gender": true,
-      "idCard": "324",
-      "phoneNumber": 23423,
-      "email": "thnhanph@gmail",
-      "address": "gia lai, gia lai, vietnam"
+      "code": "KH-4444",
+      "customerTypeId": "",
+      "name": "Trương Đình Nghệ",
+      "dateOfBirth": "2023-03-02",
+      "gender": "true",
+      "idCard": "213112212",
+      "phoneNumber": "0912345698",
+      "email": "xuandieu92@gmail.com",
+      "address": "K77/22 Thái Phiên, Quảng Trị",
+      "customerType": {
+        "id": 1,
+        "name": "diamond"
+      },
+      "id": 4
     }
   ],
   "facilities": [
@@ -94,6 +104,20 @@
       "poolArea": 2,
       "numberOfFloors": 2,
       "facilityFree": "dsf"
+    }
+  ],
+  "customerTypes": [
+    {
+      "id": 1,
+      "name": "diamond"
+    },
+    {
+      "id": 2,
+      "name": "gold"
+    },
+    {
+      "id": 3,
+      "name": "silver"
     }
   ]
 }
