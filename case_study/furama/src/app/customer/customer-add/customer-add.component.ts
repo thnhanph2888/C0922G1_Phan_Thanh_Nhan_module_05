@@ -21,19 +21,19 @@ export class CustomerAddComponent implements OnInit {
   ngOnInit() {
     this.customerTypeService.findAll().subscribe((data) => {
        this.customerTypeList = data;
-    });
-    this.formAddCustomer = new FormGroup({
-      code: new FormControl('', [Validators.required, Validators.pattern('^[K][H][-][0-9]{4}$')]),
-      customerTypeId: new FormControl('', [Validators.required]),
-      name: new FormControl('', [Validators.required]),
-      dateOfBirth: new FormControl('', [Validators.required
-        , Validators.pattern('^[0-9]{2}/[0-9]{2}/[0-9]{4}$')]),
-      gender: new FormControl('', [Validators.required]),
-      idCard: new FormControl('', [Validators.required, Validators.pattern('^([0-9]{12})$|^([0-9]{9})$')]),
-      phoneNumber: new FormControl('', [Validators.required, Validators.pattern('^((09[1|0])|([(]84[)][+]9[1|0]))[0-9]{7}$')]),
-      email: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')]),
-      address: new FormControl('', [Validators.required]),
-      customerType: new FormControl('')
+       this.formAddCustomer = new FormGroup({
+        code: new FormControl('', [Validators.required, Validators.pattern('^[K][H][-][0-9]{4}$')]),
+        customerTypeId: new FormControl('', [Validators.required]),
+        name: new FormControl('', [Validators.required]),
+        dateOfBirth: new FormControl('', [Validators.required
+          , Validators.pattern('^[0-9]{2}/[0-9]{2}/[0-9]{4}$')]),
+        gender: new FormControl('', [Validators.required]),
+        idCard: new FormControl('', [Validators.required, Validators.pattern('^([0-9]{12})$|^([0-9]{9})$')]),
+        phoneNumber: new FormControl('', [Validators.required, Validators.pattern('^((09[1|0])|([(]84[)][+]9[1|0]))[0-9]{7}$')]),
+        email: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')]),
+        address: new FormControl('', [Validators.required]),
+        customerType: new FormControl('')
+      });
     });
   }
 
@@ -45,7 +45,7 @@ export class CustomerAddComponent implements OnInit {
           title: 'Success!',
           text: 'Do you want to continue',
           icon: 'success',
-          confirmButtonText: 'Ok'
+          timer: 3000
         });
         this.router.navigateByUrl('/customer/list');
       });
@@ -54,7 +54,7 @@ export class CustomerAddComponent implements OnInit {
         icon: 'error',
         title: 'Error',
         text: 'Vui lòng kiểm tra lại dữ liệu nhập vào!',
-        footer: '<a href="">Why do I have this issue?</a>'
+        footer: '<a href="">Why do I have this issue?</a>',
       });
     }
   }

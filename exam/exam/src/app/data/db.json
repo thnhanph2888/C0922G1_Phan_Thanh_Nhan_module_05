@@ -1,29 +1,17 @@
 {
-  "customers": [
+  "cars": [],
+  "diadiems": [
     {
       "id": 1,
-      "name": "Nhan",
-      "dayOfBirth": "02-02-2002",
-      "email": "emai@gmail.com",
-      "phone": 1122334232,
-      "customerType": {
-        "id": 1,
-        "name": "diamond"
-      }
-    }
-  ],
-  "customerTypes": [
-    {
-      "id": 1,
-      "name": "diamond"
+      "name": "Da Nang"
     },
     {
       "id": 2,
-      "name": "gold"
+      "name": "Quang Tri"
     },
     {
       "id": 3,
-      "name": "silver"
+      "name": "Hue"
     }
   ]
 }

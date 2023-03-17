@@ -1,13 +1,11 @@
 <app-header></app-header>
 <app-navigation></app-navigation>
 <br>
-<h1 class="row">
+<div class="row">
   <div class="col-lg-2">
     <a class="btn btn-success" routerLink="/customer/add">add</a>
   </div>
-
-  <p class="col-lg-6">CustomerList</p>
-</h1>
+</div>
 <table id="table">
   <tr>
     <th>STT</th>
@@ -21,10 +19,9 @@
     <th>Address</th>
     <th colspan="2"></th>
   </tr>
-  <tr *ngFor="let customer of customerList | paginate: { itemsPerPage: 1, currentPage: p}; index as i;">
-    <td>{{i}}</td>
+  <tr *ngFor="let customer of customerList | paginate: { itemsPerPage: 4, currentPage: p}; index as i;">
+    <td>{{(p-1)*4+i+1}}</td>
     <td>{{customer.name}}</td>
-    <td>{{customer.customerTypeId}}</td>
     <td>{{customer.dateOfBirth}}</td>
     <td>{{customer.gender}}</td>
     <td>{{customer.idCard}}</td>

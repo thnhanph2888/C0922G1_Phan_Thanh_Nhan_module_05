@@ -12,10 +12,9 @@ export class CustomerListComponent implements OnInit {
   customerList: Customer[];
   idDelete: number;
   nameDelete: string;
-  p = 0;
+  p = 1;
 
-  constructor(private customerService: CustomerService,
-              private router: Router) {
+  constructor(private customerService: CustomerService) {
   }
 
   ngOnInit(): void {

@@ -37,12 +37,12 @@ select {
   width: 100%;
   border-collapse: collapse;
   padding: 0.5em;
-  background-color: rgba(189, 255, 126, 0.04);
+  background-color: rgba(196, 239, 155, 0.04);
 }
 
 #table th {
   color: #002807;
-  background-color: rgba(0, 150, 33, 0.38);
+  background-color: rgba(0, 116, 29, 0.07);
 }
 
 #table th, #table td {

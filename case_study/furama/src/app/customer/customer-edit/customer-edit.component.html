@@ -30,12 +30,7 @@
 
       <div>
         <label class="with-middle" for="phone_customer">Điện thoại: </label>
-        <input formControlName="phoneNumber" class="with-large" id="phone_customer">
-      </div>
-      <div class="my-input">
-        <small class="text-danger"
-               *ngIf="formEditCustomer.controls.phoneNumber.touched && formEditCustomer.controls.phoneNumber?.errors?.pattern">
-          Số điện thoại phải đúng định dạng 090xxxxxxx hoặc 091xxxxxxx hoặc (84)+90xxxxxxx hoặc (84)+91xxxxxxx</small>
+        <input formControlName="phone" class="with-large" id="phone_customer">
       </div>
       <div class="my-input">
         <label class="with-middle" for="email_customer">Email: </label>
@@ -43,16 +38,7 @@
         <small class="text-danger" *ngIf="formEditCustomer.controls.email.touched && formEditCustomer.controls.email?.errors?.pattern">
           Địa chỉ email phải đúng format</small>
       </div>
-      <div class="my-input">
-        <label class="with-middle" for="customer_type_id">Loại khách</label>
-        <select formControlName="customerTypeId" class="with-large" id="customer_type_id">
-          <option *ngFor="let customerType of customerTypeList" [ngValue]="customerType">{{customerType.name}}</option>
-        </select>
-      </div>
-      <div class="my-input">
-        <label class="with-middle" for="address_customer">Địa chỉ: </label>
-        <input formControlName="address" class="with-large" id="address_customer">
-      </div>
+
       <div class="float-end">
         <input class="btn btn-success m-2" type="submit" value="edit">
       </div>

@@ -1,1 +1,122 @@
-/* You can add global styles to this file, and also import other style files */
+#header {
+  background-color: rgb(15, 42, 15);
+}
+.nav-color {
+  background-color: rgba(12, 70, 26, 0.91);
+}
+#ul {
+  padding: 5px 1px 5px;
+  background-image: linear-gradient(  rgb(0, 82, 20),  rgb(0, 80, 17), rgb(0, 90, 24));
+  position: relative;
+  background-color: rgb(0, 80, 17);
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+}
+
+.a {
+  color: #d5ffd5;
+  text-decoration: none;
+}
+
+.dropdown-menu {
+  background-color: #042b00;
+}
+
+#logo {
+  border-radius: 40px;
+  padding: 18px;
+}
+
+select {
+  border-radius: 5px;
+}
+
+/**/
+#table {
+  width: 100%;
+  border-collapse: collapse;
+  padding: 0.5em;
+  background-color: rgba(189, 255, 126, 0.04);
+}
+
+#table th {
+  color: #002807;
+  background-color: rgba(0, 97, 24, 0.13);
+}
+
+#table th, #table td {
+  padding: 10px;
+  border: 1px solid rgba(0, 90, 0, 0.67);
+}
+
+/**/
+.page-control {
+  float: right;
+  padding: 1em;
+}
+
+.button {
+  border-radius: 4px;
+  margin: 5px;
+  background-color: rgba(0, 71, 0, 0.8);
+  color: #ffffff;
+}
+
+.card {
+  background-color: rgba(156, 150, 47, 0.19);
+  box-shadow: 0 0 10px 0 rgba(201, 132, 28, 0.74);
+}
+
+.footer {
+  background-color: rgba(12, 70, 26, 0.78);
+  color: white;
+}
+
+#footer-table td {
+  padding: 5px 10px;
+}
+
+.text-footer {
+  padding: 5px;
+  background-image: linear-gradient(180deg, #033b03, rgba(12, 70, 26, 0.75));
+}
+
+.with-middle {
+  width: 100px;
+}
+
+.my-input {
+  border-radius: 4px;
+  padding: 4px;
+  width: 100%;
+  display: block;
+}
+.error {
+  color: red;
+}
+.my-form {
+  background-image: linear-gradient(rgba(86, 184, 51, 0.78), #d2e7d2);
+  box-shadow: 0 1px 5px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
+}
+label {
+  font-weight: normal;font-family: Arial, sans-serif;
+}
+h2{
+  padding: 20px;
+  font-family: Garamond, serif;
+  text-decoration-line: underline;
+}
+.my-text-danger{
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+}
+.my-btn {
+  color: white;
+  border-radius: 4px;
+   padding: 5px;
+   background-color: green;
+   margin: 2px;
+}
+

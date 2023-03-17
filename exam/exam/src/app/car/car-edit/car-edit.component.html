@@ -1,0 +1,77 @@
+<form *ngIf="formEditCar" [formGroup]="formEditCar" class="row justify-content-center" (ngSubmit)="edit()">
+  <div class="col-4 m-4 p-2 my-form border border-1 border-secondary rounded">
+
+    <h2>Edit</h2>
+
+    <div class="pt-3">
+      <label class="with-middle">Bien so xe: </label>
+      <input readonly formControlName="licensePlates" class="my-input " id="name">
+      <small *ngIf="formEditCar.controls.licensePlates?.touched" class="text-danger my-text-danger">
+        Không được chỉnh sửa </small>
+    </div>
+    <div class="pt-3">
+      <label class="with-middle">Loại xe: </label>
+      <input formControlName="carType" class="my-input ">
+      <small *ngIf="formEditCar.controls.carType?.touched && formEditCar.controls.carType?.errors?.required" class="text-danger my-text-danger">
+        Không được để trống thông tin này </small>
+    </div>
+    <div class="pt-3">
+      <label class="with-middle">Tên nhà xe: </label>
+      <input formControlName="garage" class="my-input ">
+      <small *ngIf="formEditCar.controls.garage?.touched && formEditCar.controls.garage?.errors?.required" class="text-danger my-text-danger">
+        Không được để trống thông tin này </small>
+    </div>
+
+    <div class="pt-3">
+      <label class="with-middle">Điểm đi: </label>
+      <select formControlName="departure" class="my-input ">
+        <option [ngValue]="diadiem" *ngFor="let diadiem of diadiemList">{{diadiem.name}}</option>
+      </select>
+      <small *ngIf="formEditCar.controls.departure?.touched && formEditCar.controls.departure?.errors?.required" class="text-danger my-text-danger">
+        Không được để trống thông tin này </small>
+    </div>
+    <div class="pt-3">
+      <label class="with-middle">Điểm đi: </label>
+      <select formControlName="destination" class="my-input ">
+        <option [ngValue]="diadiem" *ngFor="let diadiem of diadiemList">{{diadiem.name}}</option>
+      </select>
+      <small *ngIf="formEditCar.controls.destination?.touched && formEditCar.controls.destination?.errors?.required" class="text-danger my-text-danger">
+        Không được để trống thông tin này </small>
+    </div>
+
+    <div class="pt-3">
+      <label class="with-middle">Số điện thoại: </label>
+      <input formControlName="phone" class="my-input ">
+      <small *ngIf="formEditCar.controls.phone?.touched && formEditCar.controls.phone?.errors?.required" class="text-danger my-text-danger">
+        Không được để trống thông tin này </small>
+      <small *ngIf="formEditCar.controls.phone.touched && formEditCar.controls.phone?.errors?.pattern" class="text-danger my-text-danger">
+        Số điện thoại phải có 10 số và bắt đầu bằng 090 hoặc 093 hoặc 097 </small>
+    </div>
+    <div class="pt-3">
+      <label class="with-middle">Email: </label>
+      <input formControlName="email" class="my-input ">
+      <small *ngIf="formEditCar.controls.email?.touched && formEditCar.controls.email?.errors?.pattern" class="text-danger my-text-danger">
+        Email phải đúng định dạng </small>
+      <small *ngIf="formEditCar.controls.email?.touched && formEditCar.controls.email?.errors?.required" class="text-danger my-text-danger">
+        Không được để trống thông tin này </small>
+    </div>
+    <div class="pt-3">
+      <label class="with-middle">Giờ khỏi hành: </label>
+      <input formControlName="departureTime" class="my-input ">
+      <small *ngIf="formEditCar.controls.departureTime?.touched && formEditCar.controls.departureTime?.errors?.required" class="text-danger my-text-danger">
+        Không được để trống thông tin này </small>
+    </div>
+    <div class="pt-3">
+      <label class="with-middle">Giờ đến: </label>
+      <input formControlName="arrivalTime" class="my-input ">
+      <small *ngIf="formEditCar.controls.arrivalTime?.touched && formEditCar.controls.arrivalTime?.errors?.required" class="text-danger my-text-danger">
+        Không được để trống thông tin này </small>
+    </div>
+
+    <div class="float-end">
+      <button class="my-btn" (click)="cancel()" >Cancel</button>
+      <button class="my-btn" type="submit">Edit</button>
+    </div>
+
+  </div>
+</form>
