@@ -11,6 +11,7 @@ import {HeaderComponent} from './common/header/header.component';
 import {FooterComponent} from './common/footer/footer.component';
 import {NavigationComponent} from './common/navigation/navigation.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { CarAddComponent } from './car/car-add/car-add.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     CarEditComponent,
     HeaderComponent,
     FooterComponent,
-    NavigationComponent
+    NavigationComponent,
+    CarAddComponent
   ],
   imports: [
     BrowserModule,

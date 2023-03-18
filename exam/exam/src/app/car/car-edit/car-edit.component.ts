@@ -41,11 +41,11 @@ export class CarEditComponent implements OnInit {
   initForm(carEdit: Car) {
     this.formEditCar = new FormGroup({
       id: new FormControl(carEdit.id),
-      bienSoXe: new FormControl(carEdit.licensePlates),
+      licensePlates: new FormControl(carEdit.licensePlates),
       carType: new FormControl(carEdit.carType, Validators.required),
-      tenNhaXe: new FormControl(carEdit.garage, Validators.required),
-      diemdi: new FormControl(this.diadiemList.filter((diadiem) => diadiem.id == carEdit.departure.id)[0], Validators.required),
-      diemden: new FormControl(this.diadiemList.filter((diadiem) => diadiem.id == carEdit.destination.id)[0], Validators.required),
+      garage: new FormControl(carEdit.garage, Validators.required),
+      departure: new FormControl(this.diadiemList.filter((diadiem) => diadiem.id == carEdit.departure.id)[0], Validators.required),
+      destination: new FormControl(this.diadiemList.filter((diadiem) => diadiem.id == carEdit.destination.id)[0], Validators.required),
       phone: new FormControl(carEdit.phone, [Validators.required, Validators.pattern('^[0][9][037][0-9]{7}$')]),
       email: new FormControl(carEdit.email, [Validators.required]),
       departureTime: new FormControl(carEdit.departureTime, Validators.required),

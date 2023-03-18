@@ -20,6 +20,10 @@ export class CarService {
     return this.httpClient.get<Car>(this.API + '/' + id);
   }
 
+  add(car: Car): Observable<Car> {
+    return this.httpClient.post<Car>(this.API, car);
+  }
+
   edit(id: number, car: Car): Observable<Car> {
     return this.httpClient.put<Car>(this.API + '/' + id, car);
   }

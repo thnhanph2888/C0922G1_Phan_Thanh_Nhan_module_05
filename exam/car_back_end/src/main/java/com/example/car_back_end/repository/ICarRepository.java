@@ -10,13 +10,13 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public interface ICarRepository extends JpaRepository<Car, Integer> {
-    @Query(nativeQuery = true, value = "select c.* from car as c")
+    @Query(nativeQuery = true, value = "select c.* from `car` as c")
     Page<Car> findAllPage(Pageable pageable);
-    @Modifying
-    @Query(nativeQuery = true, value = "delete from car as c where c.id = :id")
-    boolean delete(@Param("id")int id);
-    @Modifying
-    @Query(nativeQuery = true, value = "insert into car(arrival_time" +
+    @Modifying(clearAutomatically = true)
+    @Query(nativeQuery = true, value = "delete from `car` as c where c.id = :id")
+    void delete(@Param("id")int id);
+    @Modifying(clearAutomatically = true)
+    @Query(nativeQuery = true, value = "insert into `car`(arrival_time" +
             "departure_time" +
             "email" +
             "garage" +
@@ -35,7 +35,7 @@ public interface ICarRepository extends JpaRepository<Car, Integer> {
             ":departureId," +
             ":destinationId," +
             ")")
-    boolean add(@Param("licensePlates")String licensePlates,
+    void add(@Param("licensePlates")String licensePlates,
                 @Param("carTypeId")int carTypeId,
                 @Param("garage")String garage,
                 @Param("phone")String phone,
@@ -45,8 +45,8 @@ public interface ICarRepository extends JpaRepository<Car, Integer> {
                 @Param("departureId")int departureId,
                 @Param("destinationId")int destinationId
                 );
-    @Modifying
-    @Query(nativeQuery = true, value = "update car" +
+    @Modifying(clearAutomatically = true)
+    @Query(nativeQuery = true, value = "update `car`" +
             "set arrival_time = :arrivalTime," +
             "departure_time = :departureTime," +
             "email = :email," +
@@ -55,8 +55,8 @@ public interface ICarRepository extends JpaRepository<Car, Integer> {
             "phone = :phone," +
             "car_type_id = :carTypeId," +
             "departure_id = :departureId," +
-            "destinationId = :destinationId where car.id = :idUpdate")
-    boolean update(@Param("idUpdate")int idUpdate,
+            "destinationId = :destinationId where `car`.id = :idUpdate")
+    void update(@Param("idUpdate")int idUpdate,
                    @Param("licensePlates")String licensePlates,
                    @Param("carTypeId")int carTypeId,
                    @Param("garage")String garage,

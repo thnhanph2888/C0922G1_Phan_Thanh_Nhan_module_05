@@ -6,7 +6,6 @@ import com.example.car_back_end.service.ICarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -21,7 +20,7 @@ public class CarService implements ICarService {
 
     @Override
     public boolean update(int id, Car car) {
-        return carRepository.update(id
+      carRepository.update(id
                 , car.getLicensePlates()
                 , car.getCarType().getId()
                 , car.getGarage()
@@ -31,11 +30,12 @@ public class CarService implements ICarService {
                 , car.getArrivalTime().toString()
                 , car.getDeparture().getId()
                 , car.getDestination().getId());
+      return true;
     }
 
     @Override
     public boolean add(Car car) {
-        return carRepository.add(car.getLicensePlates()
+        carRepository.add(car.getLicensePlates()
                 , car.getCarType().getId()
                 , car.getGarage()
                 , car.getPhone()
@@ -44,10 +44,12 @@ public class CarService implements ICarService {
                 , car.getArrivalTime().toString()
                 , car.getDeparture().getId()
                 , car.getDestination().getId());
+        return true;
     }
 
     @Override
     public boolean delete(int id) {
-        return carRepository.delete(id);
+         carRepository.delete(id);
+         return true;
     }
 }

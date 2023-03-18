@@ -33,16 +33,16 @@ public class RestCarController {
     @PostMapping("/car/add")
     public ResponseEntity addCar(Car car) {
         carService.add(car);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity(HttpStatus.OK);
     }
     @PutMapping("/car/edit/{id}")
     public ResponseEntity editCar(@PathVariable("id")int id,  Car car) {
         carService.update(id, car);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity(HttpStatus.OK);
     }
     @DeleteMapping("/car/delete/{id}")
     public ResponseEntity deleteCar(@PathVariable("id")int id) {
         carService.delete(id);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity(HttpStatus.OK);
     }
 }
