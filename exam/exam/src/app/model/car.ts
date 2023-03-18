@@ -1,4 +1,4 @@
-import {Diadiem} from './diadiem';
+import {Address} from './address';
 import {CarType} from './car-type';
 
 export interface Car {
@@ -10,6 +10,6 @@ export interface Car {
   email: string;
   departureTime: string;
   arrivalTime: string;
-  departure: Diadiem;
-  destination: Diadiem;
+  departure: Address;
+  destination: Address;
 }

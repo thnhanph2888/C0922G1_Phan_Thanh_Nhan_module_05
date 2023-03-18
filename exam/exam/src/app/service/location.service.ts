@@ -6,10 +6,10 @@ import {Address} from '../model/address';
 @Injectable({
   providedIn: 'root'
 })
-export class DiadiemService {
-  API = 'http://localhost:3000/diadiems';
+export class LocationService {
+
   constructor(private httpClient: HttpClient) { }
-  findAll(): Observable<Address[]> {
-    return this.httpClient.get<Address[]>(this.API);
+    findAll(): Observable<Address[]> {
+    return this.httpClient.get<Address[]>('http://localhost:8080/address/list');
   }
 }

@@ -1,10 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {DiadiemService} from '../../service/diadiem.service';
-import {Diadiem} from '../../model/diadiem';
+import {Address} from '../../model/address';
 import {CarService} from '../../service/car.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Car} from '../../model/car';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {LocationService} from '../../service/location.service';
+import {CarTypeService} from '../../service/car-type.service';
+import {CarType} from '../../model/car-type';
 
 @Component({
   selector: 'app-car-edit',
@@ -12,20 +15,25 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./car-edit.component.css']
 })
 export class CarEditComponent implements OnInit {
-  diadiemList: Diadiem[];
+  addressList: Address[];
   idEdit: number;
   formEditCar: FormGroup;
+  carTypeList: CarType[];
 
-  constructor(private diadiemService: DiadiemService,
+  constructor(private addressService: LocationService,
               private activatedRoute: ActivatedRoute,
+              private carTypeService: CarTypeService,
               private carService: CarService,
               private route: Router) {
   }
 
   ngOnInit(): void {
-    this.diadiemService.findAll().subscribe((diadiemList) => {
-      this.diadiemList = diadiemList;
-      this.getCar();
+    this.addressService.findAll().subscribe((diadiemList) => {
+      this.addressList = diadiemList;
+      this.carTypeService.findAll().subscribe((carTypeList) => {
+        this.carTypeList = carTypeList;
+        this.getCar();
+      });
     });
   }
 
@@ -42,10 +50,10 @@ export class CarEditComponent implements OnInit {
     this.formEditCar = new FormGroup({
       id: new FormControl(carEdit.id),
       licensePlates: new FormControl(carEdit.licensePlates),
-      carType: new FormControl(carEdit.carType, Validators.required),
+      carType: new FormControl(this.carTypeList.filter((carType) => carType.id === carEdit.carType.id), Validators.required),
       garage: new FormControl(carEdit.garage, Validators.required),
-      departure: new FormControl(this.diadiemList.filter((diadiem) => diadiem.id == carEdit.departure.id)[0], Validators.required),
-      destination: new FormControl(this.diadiemList.filter((diadiem) => diadiem.id == carEdit.destination.id)[0], Validators.required),
+      departure: new FormControl(this.addressList.filter((diadiem) => diadiem.id === carEdit.departure.id)[0], Validators.required),
+      destination: new FormControl(this.addressList.filter((diadiem) => diadiem.id === carEdit.destination.id)[0], Validators.required),
       phone: new FormControl(carEdit.phone, [Validators.required, Validators.pattern('^[0][9][037][0-9]{7}$')]),
       email: new FormControl(carEdit.email, [Validators.required]),
       departureTime: new FormControl(carEdit.departureTime, Validators.required),

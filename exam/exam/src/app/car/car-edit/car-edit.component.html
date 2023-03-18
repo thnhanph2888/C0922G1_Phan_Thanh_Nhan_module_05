@@ -11,7 +11,9 @@
     </div>
     <div class="pt-3">
       <label class="with-middle">Loại xe: </label>
-      <input formControlName="carType" class="my-input ">
+      <select formControlName="carType" class="my-input ">
+        <option [ngValue]="carType" *ngFor="let carType of carTypeList">{{carType.name}}</option>
+      </select>
       <small *ngIf="formEditCar.controls.carType?.touched && formEditCar.controls.carType?.errors?.required" class="text-danger my-text-danger">
         Không được để trống thông tin này </small>
     </div>
@@ -25,7 +27,7 @@
     <div class="pt-3">
       <label class="with-middle">Điểm đi: </label>
       <select formControlName="departure" class="my-input ">
-        <option [ngValue]="diadiem" *ngFor="let diadiem of diadiemList">{{diadiem.name}}</option>
+        <option [ngValue]="address" *ngFor="let address of addressList">{{address.name}}</option>
       </select>
       <small *ngIf="formEditCar.controls.departure?.touched && formEditCar.controls.departure?.errors?.required" class="text-danger my-text-danger">
         Không được để trống thông tin này </small>
@@ -33,7 +35,7 @@
     <div class="pt-3">
       <label class="with-middle">Điểm đi: </label>
       <select formControlName="destination" class="my-input ">
-        <option [ngValue]="diadiem" *ngFor="let diadiem of diadiemList">{{diadiem.name}}</option>
+        <option [ngValue]="address" *ngFor="let address of addressList">{{address.name}}</option>
       </select>
       <small *ngIf="formEditCar.controls.destination?.touched && formEditCar.controls.destination?.errors?.required" class="text-danger my-text-danger">
         Không được để trống thông tin này </small>

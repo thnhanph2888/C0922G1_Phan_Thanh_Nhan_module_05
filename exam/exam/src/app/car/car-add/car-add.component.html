@@ -1,7 +1,7 @@
 <form *ngIf="formAddCar" [formGroup]="formAddCar" class="row justify-content-center" (ngSubmit)="add()">
   <div class="col-4 m-4 p-2 my-form border border-1 border-secondary rounded">
 
-    <h2>Edit</h2>
+    <h2>Add</h2>
 
     <div class="pt-3">
       <label class="with-middle">Bien so xe: </label>
@@ -11,7 +11,9 @@
     </div>
     <div class="pt-3">
       <label class="with-middle">Loại xe: </label>
-      <input formControlName="carType" class="my-input ">
+      <select formControlName="carType" class="my-input ">
+        <option [ngValue]="carType" *ngFor="let carType of carTypeList">{{carType.name}}</option>
+      </select>
       <small *ngIf="formAddCar.controls.carType?.touched && formAddCar.controls.carType?.errors?.required" class="text-danger my-text-danger">
         Không được để trống thông tin này </small>
     </div>
@@ -25,7 +27,7 @@
     <div class="pt-3">
       <label class="with-middle">Điểm đi: </label>
       <select formControlName="departure" class="my-input ">
-        <option [ngValue]="diadiem" *ngFor="let diadiem of diadiemList">{{diadiem.name}}</option>
+        <option [ngValue]="address" *ngFor="let address of addressList">{{address.name}}</option>
       </select>
       <small *ngIf="formAddCar.controls.departure?.touched && formAddCar.controls.departure?.errors?.required" class="text-danger my-text-danger">
         Không được để trống thông tin này </small>
@@ -33,7 +35,7 @@
     <div class="pt-3">
       <label class="with-middle">Điểm đi: </label>
       <select formControlName="destination" class="my-input ">
-        <option [ngValue]="diadiem" *ngFor="let diadiem of diadiemList">{{diadiem.name}}</option>
+        <option [ngValue]="address" *ngFor="let address of addressList">{{address.name}}</option>
       </select>
       <small *ngIf="formAddCar.controls.destination?.touched && formAddCar.controls.destination?.errors?.required" class="text-danger my-text-danger">
         Không được để trống thông tin này </small>
