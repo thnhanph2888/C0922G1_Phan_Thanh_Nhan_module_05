@@ -12,18 +12,18 @@ import org.springframework.transaction.annotation.Transactional;
 public interface ICarRepository extends JpaRepository<Car, Integer> {
     @Query(nativeQuery = true, value = "select c.* from `car` as c")
     Page<Car> findAllPage(Pageable pageable);
-    @Modifying(clearAutomatically = true)
+    @Modifying
     @Query(nativeQuery = true, value = "delete from `car` as c where c.id = :id")
     void delete(@Param("id")int id);
-    @Modifying(clearAutomatically = true)
-    @Query(nativeQuery = true, value = "insert into `car`(arrival_time" +
-            "departure_time" +
-            "email" +
-            "garage" +
-            "license_plates" +
-            "phone" +
-            "car_type_id" +
-            "departure_id" +
+    @Modifying
+    @Query(nativeQuery = true, value = "insert into `car`(arrival_time," +
+            "departure_time," +
+            "email," +
+            "garage," +
+            "license_plates," +
+            "phone," +
+            "car_type_id," +
+            "departure_id," +
             "destination_id) values" +
             "(:arrivalTime," +
             ":departureTime," +
@@ -33,8 +33,7 @@ public interface ICarRepository extends JpaRepository<Car, Integer> {
             ":phone," +
             ":carTypeId," +
             ":departureId," +
-            ":destinationId," +
-            ")")
+            ":destinationId)")
     void add(@Param("licensePlates")String licensePlates,
                 @Param("carTypeId")int carTypeId,
                 @Param("garage")String garage,
@@ -45,7 +44,7 @@ public interface ICarRepository extends JpaRepository<Car, Integer> {
                 @Param("departureId")int departureId,
                 @Param("destinationId")int destinationId
                 );
-    @Modifying(clearAutomatically = true)
+    @Modifying
     @Query(nativeQuery = true, value = "update `car`" +
             "set arrival_time = :arrivalTime," +
             "departure_time = :departureTime," +
@@ -55,7 +54,7 @@ public interface ICarRepository extends JpaRepository<Car, Integer> {
             "phone = :phone," +
             "car_type_id = :carTypeId," +
             "departure_id = :departureId," +
-            "destinationId = :destinationId where `car`.id = :idUpdate")
+            "destination_id = :destinationId where `car`.id = :idUpdate")
     void update(@Param("idUpdate")int idUpdate,
                    @Param("licensePlates")String licensePlates,
                    @Param("carTypeId")int carTypeId,
@@ -66,4 +65,6 @@ public interface ICarRepository extends JpaRepository<Car, Integer> {
                    @Param("arrivalTime")String arrivalTime,
                    @Param("departureId")int departureId,
                    @Param("destinationId")int destinationId);
+    @Query(nativeQuery = true, value = "select c.* from car as c where c.id = :id")
+    Car findById(int id);
 }

@@ -52,4 +52,9 @@ public class CarService implements ICarService {
          carRepository.delete(id);
          return true;
     }
+
+    @Override
+    public Car findById(int id) {
+        return carRepository.findById(id);
+    }
 }

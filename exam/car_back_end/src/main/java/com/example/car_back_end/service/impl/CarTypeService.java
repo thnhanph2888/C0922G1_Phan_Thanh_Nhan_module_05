@@ -1,7 +1,6 @@
 package com.example.car_back_end.service.impl;
 
 import com.example.car_back_end.model.CarType;
-import com.example.car_back_end.repository.ICarRepository;
 import com.example.car_back_end.repository.ICarTypeRepository;
 import com.example.car_back_end.service.ICarTypeService;
 import org.springframework.beans.factory.annotation.Autowired;

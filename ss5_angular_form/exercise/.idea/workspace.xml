@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6b55bb61-b4f0-4eeb-a312-40ecd3fcaaa3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../exam/car_back_end/src/main/java/com/example/car_back_end/dto/CarDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/contract/contract-list/contract-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/contract/contract-list/contract-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/customer/customer-list/customer-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/customer/customer-list/customer-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/customer/customer-list/customer-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/furama-resort/src/app/customer/customer-list/customer-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/car_back_end/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../exam/car_back_end/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/car_back_end/src/main/java/com/example/car_back_end/controller/RestCarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../exam/car_back_end/src/main/java/com/example/car_back_end/controller/RestCarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/car_back_end/src/main/java/com/example/car_back_end/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../exam/car_back_end/src/main/java/com/example/car_back_end/model/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/car_back_end/src/main/java/com/example/car_back_end/model/CarType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../exam/car_back_end/src/main/java/com/example/car_back_end/model/CarType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/car_back_end/src/main/java/com/example/car_back_end/repository/ICarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../exam/car_back_end/src/main/java/com/example/car_back_end/repository/ICarRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/car_back_end/src/main/java/com/example/car_back_end/service/ICarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../exam/car_back_end/src/main/java/com/example/car_back_end/service/ICarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/car_back_end/src/main/java/com/example/car_back_end/service/impl/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../exam/car_back_end/src/main/java/com/example/car_back_end/service/impl/CarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/car_back_end/src/main/java/com/example/car_back_end/service/impl/CarTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../exam/car_back_end/src/main/java/com/example/car_back_end/service/impl/CarTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../exam/exam/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../exam/exam/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../exam/exam/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/car/car-add/car-add.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/car/car-add/car-add.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/car/car-add/car-add.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/car/car-edit/car-edit.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/car/car-edit/car-edit.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/car/car-edit/car-edit.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/car/car-list/car-list.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/car/car-list/car-list.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/car/car-list/car-list.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/common/footer/footer.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/common/footer/footer.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/common/footer/footer.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/common/header/header.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/common/header/header.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/common/header/header.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/common/navigation/navigation.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/common/navigation/navigation.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/common/navigation/navigation.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/model/address.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/model/car-type.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/model/car.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/service/car-type.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/service/car.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/service/diadiem.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/service/location.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/app/service/location.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../exam/exam/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam/exam/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../exam/exam/src/styles.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2NlqrraLbHg2regBxsW8YEmIL72" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ss3_angular_overview/practice/angular-change" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6b55bb61-b4f0-4eeb-a312-40ecd3fcaaa3" name="Default Changelist" comment="" />
+      <created>1680249217059</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680249217059</updated>
+      <workItem from="1680249218216" duration="30000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1680249246818">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1680249246818" />
+  </component>
+</project>

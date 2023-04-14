@@ -1,0 +1,386 @@
+<div class="container-fluid justify-content-center d-flex">
+  <div class="col-11">
+    <h1 style="size:32px; text-align: center; margin-top: 1rem; margin-bottom: 30px;  font-family: 'Copperplate Gothic Bold'">
+      DANH SÁCH VÉ</h1>
+    <!--                     Tìm kiém-->
+    <div class="col-11 row ms-2 mb-2">
+      <div class=" d-flex mt-2 mb-2 col-md-4 col-sm-6 align-items-center">
+        <label style="white-space: nowrap;" for="nameCustomer" class="form-label me-3">Tên
+          khách hàng:</label>
+        <input type="text" class="form-control" id="nameCustomer">
+      </div>
+      <div class=" d-flex mt-2 mb-2 col-md-4 col-sm-6 align-items-center">
+        <label style="white-space: nowrap;" for="phoneCustomer" class="form-label me-3">SĐT
+          khách hàng:</label>
+        <input type="text" class="form-control" id="phoneCustomer">
+      </div>
+      <div class=" d-flex mt-2 mb-2 col-md-4 col-sm-6 align-items-center">
+        <label style="white-space: nowrap;" for="nameEmployee" class="form-label me-3">Tên
+          người tạo vé:</label>
+        <input type="text" class="form-control" id="nameEmployee">
+      </div>
+      <div class=" d-flex mt-2 mb-2 col-md-4 col-sm-6 align-items-center">
+        <label style="white-space: nowrap;" for="phoneEmployee" class="form-label me-3">SĐT
+          người tạo vé:</label>
+        <input type="text" class="form-control" id="phoneEmployee">
+      </div>
+      <div class=" d-flex mt-2 mb-2 col-md-4 col-sm-6 align-items-center">
+        <label style="white-space: nowrap;" for="expiry" class="form-label me-3">Ngày
+          hết hạn:</label>
+        <input type="date" class="form-control" id="expiry">
+      </div>
+      <div class=" d-flex mt-2 mb-2 col-md-4 col-sm-6 align-items-center">
+        <label style="white-space: nowrap;" for="floor"
+               class="form-label me-3">Tầng:</label>
+        <select class="form-select" id="floor">
+          <option selected>-chọn tầng-</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+      </div>
+      <div class=" d-flex mt-2 mb-2 col-md-4 col-sm-6 align-items-center">
+        <label style="white-space: nowrap;" for="ticket_type"
+               class="form-label me-3">Loại vé:</label>
+        <select class="form-select" id="ticket_type">
+          <option selected>-chọn loại vé-</option>
+          <option>ngày</option>
+          <option>tháng</option>
+          <option>năm</option>
+        </select>
+      </div>
+      <div class="d-flex mt-2 mb-2 col-4 col-md-4 col-sm-6 align-items-center"></div>
+      <div class="d-flex mt-2 mb-2 col-4 col-md-4 col-sm-6 align-items-center">
+        <label class="col-8"></label>
+        <button class="btn" type="submit"
+                style="white-space: nowrap; text-align: center; size: 30px; background-color: darkorange">
+          <i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm
+        </button>
+      </div>
+    </div>
+
+    <!--                    table-->
+    <div class="table-container">
+      <table class="fixed-size-table" style="box-shadow: 0 0 10px 0 #0031e3; width: 88em">
+        <thead style="background-color: #E67E22">
+        <tr>
+          <th scope="col" style="vertical-align: middle;">STT</th>
+          <th scope="col" style="vertical-align: middle;">Mã vé</th>
+          <th scope="col" style="vertical-align: middle;">Biển số xe</th>
+          <th scope="col" style="vertical-align: middle;">Tên khách hàng</th>
+          <th scope="col" style="vertical-align: middle;">SDT khách hàng</th>
+          <th scope="col" style="vertical-align: middle;">Tên người tạo vé</th>
+          <th scope="col" style="vertical-align: middle;">SDT người tạo vé</th>
+          <th scope="col" style="vertical-align: middle;">Loại vé</th>
+          <th scope="col" style="vertical-align: middle;">Giá vé</th>
+          <th scope="col" style="vertical-align: middle;">Tầng</th>
+          <th scope="col" style="vertical-align: middle;">Thời gian hết hiệu lực</th>
+          <th scope="col" style="vertical-align: middle;">Chi tiết</th>
+          <th scope="col" style="vertical-align: middle;">Sửa</th>
+          <th scope="col" style="vertical-align: middle;">Xóa</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td style="text-align: center">1</td>
+          <td style="text-align: left">30-F 23223</td>
+          <td>Phan Thành Nhân</td>
+          <td>0369353663</td>
+          <td>Phạm Giang</td>
+          <td>0369333323</td>
+          <td>ngày</td>
+          <td>10000</td>
+          <td>1</td>
+          <td>27/4/2023</td>
+          <td>
+                                         <span type="submit">
+                                             <i class="fa-solid fa-eye" style="color:#3f77ff;"></i>
+                                         </span>
+          </td>
+          <td>
+                                         <span type="submit">
+                                             <i class="fa-regular fa-pen-to-square" style="color:#ef8500;"></i>
+                                         </span>
+          </td>
+          <td>
+                                        <span type="submit" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                            <i class="fa-regular fa-trash-can" style="color:#ff0000;"></i>
+                                        </span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td style="text-align: center">2</td>
+          <td style="text-align: left">80-H1 22333</td>
+          <td>Nguyễn Huy</td>
+          <td>0369804444</td>
+          <td>Phan Thành Nhân</td>
+          <td>0378898466</td>
+          <td>ngày</td>
+          <td>110000</td>
+          <td>8</td>
+          <td>21/9/2023</td>
+          <td>
+                                         <span type="submit">
+                                             <i class="fa-solid fa-eye" style="color:#3f77ff;"></i>
+                                         </span>
+          </td>
+          <td>
+                                         <span type="submit">
+                                             <i class="fa-regular fa-pen-to-square" style="color:#ef8500;"></i>
+                                         </span>
+          </td>
+          <td>
+                                        <span type="submit" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                            <i class="fa-regular fa-trash-can" style="color:#ff0000;"></i>
+                                        </span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td style="text-align: center">3</td>
+          <td style="text-align: left">76-H1 22333</td>
+          <td>Phạm Tiến</td>
+          <td>0369038454</td>
+          <td>Lê Xuân Vũ</td>
+          <td>0379943466</td>
+          <td>tháng</td>
+          <td>220000</td>
+          <td>7</td>
+          <td>17/4/2023</td>
+          <td>
+                                         <span type="submit">
+                                             <i class="fa-solid fa-eye" style="color:#3f77ff;"></i>
+                                         </span>
+          </td>
+          <td>
+                                         <span type="submit">
+                                             <i class="fa-regular fa-pen-to-square" style="color:#ef8500;"></i>
+                                         </span>
+          </td>
+          <td>
+                                        <span type="submit" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                            <i class="fa-regular fa-trash-can" style="color:#ff0000;"></i>
+                                        </span>
+          </td>
+        </tr>
+        <!--                <tr>-->
+        <!--                    <td>-->
+        <!--                        <span class="ms-3">Không tìm thấy vé này</span>-->
+        <!--                    </td>-->
+        <!--                </tr>-->
+        <tr>
+          <th scope="row">4</th>
+          <td style="text-align: center">4</td>
+          <td style="text-align: left">80-H1 22333</td>
+          <td>Nguyễn Phúc</td>
+          <td>0369804444</td>
+          <td>Nguyễn Minh</td>
+          <td>0376789466</td>
+          <td>tháng</td>
+          <td>120000</td>
+          <td>3</td>
+          <td>27/4/2023</td>
+          <td>
+                                         <span type="submit">
+                                             <i class="fa-solid fa-eye" style="color:#3f77ff;"></i>
+                                         </span>
+          </td>
+          <td>
+                                         <span type="submit">
+                                             <i class="fa-regular fa-pen-to-square" style="color:#ef8500;"></i>
+                                         </span>
+          </td>
+          <td>
+                                        <span type="submit" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                            <i class="fa-regular fa-trash-can" style="color:#ff0000;"></i>
+                                        </span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td style="text-align: center">5</td>
+          <td style="text-align: left">80-H1 22333</td>
+          <td>Nguyễn Phúc</td>
+          <td>0369804444</td>
+          <td>Nguyễn Minh</td>
+          <td>0376789466</td>
+          <td>tháng</td>
+          <td>120000</td>
+          <td>3</td>
+          <td>27/4/2023</td>
+          <td>
+                                         <span type="submit">
+                                             <i class="fa-solid fa-eye" style="color:#3f77ff;"></i>
+                                         </span>
+          </td>
+          <td>
+                                         <span type="submit">
+                                             <i class="fa-regular fa-pen-to-square" style="color:#ef8500;"></i>
+                                         </span>
+          </td>
+          <td>
+                                        <span type="submit" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                            <i class="fa-regular fa-trash-can" style="color:#ff0000;"></i>
+                                        </span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td style="text-align: center">6</td>
+          <td style="text-align: left">80-H1 22333</td>
+          <td>Nguyễn Phúc</td>
+          <td>0369804444</td>
+          <td>Nguyễn Minh</td>
+          <td>0376789466</td>
+          <td>tháng</td>
+          <td>120000</td>
+          <td>3</td>
+          <td>27/4/2023</td>
+          <td>
+                                         <span type="submit">
+                                             <i class="fa-solid fa-eye" style="color:#3f77ff;"></i>
+                                         </span>
+          </td>
+          <td>
+                                         <span type="submit">
+                                             <i class="fa-regular fa-pen-to-square" style="color:#ef8500;"></i>
+                                         </span>
+          </td>
+          <td>
+                                        <span type="submit" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                            <i class="fa-regular fa-trash-can" style="color:#ff0000;"></i>
+                                        </span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td >7</td>
+          <td style="text-align: left">80-H1 22333</td>
+          <td>Nguyễn Phúc</td>
+          <td>0369804444</td>
+          <td>Nguyễn Minh</td>
+          <td>0376789466</td>
+          <td>tháng</td>
+          <td>120000</td>
+          <td>3</td>
+          <td>27/4/2023</td>
+          <td>
+                                         <span type="submit">
+                                             <i class="fa-solid fa-eye" style="color:#3f77ff;"></i>
+                                         </span>
+          </td>
+          <td>
+                                         <span type="submit">
+                                             <i class="fa-regular fa-pen-to-square" style="color:#ef8500;"></i>
+                                         </span>
+          </td>
+          <td>
+                                        <span type="submit" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                            <i class="fa-regular fa-trash-can" style="color:#ff0000;"></i>
+                                        </span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td style="text-align: center">8</td>
+          <td style="text-align: left">80-H1 22333</td>
+          <td>Nguyễn Phúc</td>
+          <td>0369804444</td>
+          <td>Nguyễn Minh</td>
+          <td>0376789466</td>
+          <td>tháng</td>
+          <td>120000</td>
+          <td>3</td>
+          <td>27/4/2023</td>
+          <td>
+                                         <span type="submit">
+                                             <i class="fa-solid fa-eye" style="color:#3f77ff;"></i>
+                                         </span>
+          </td>
+          <td>
+                                         <span type="submit">
+                                             <i class="fa-regular fa-pen-to-square" style="color:#ef8500;"></i>
+                                         </span>
+          </td>
+          <td>
+                                        <span type="submit" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                            <i class="fa-regular fa-trash-can" style="color:#ff0000;"></i>
+                                        </span>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row m-2">
+      <div class="mb-2 col-md-4 col-sm-6" style=" margin-bottom: 20px;margin-top: 5px">
+        <button class="btn" style=" background-color: darkorange; white-space: nowrap;">Thêm mới</button>
+      </div>
+      <div class="mb-8 col-md-4 col-sm-0"></div>
+      <div class="mb-2 col-md-4 col-sm-6" style=" margin-bottom: 20px;margin-top: 5px">
+        <div class="pagination">
+          <a class="btn" style="background-color: darkorange" href="#">Trước</a>
+          <a href="#">1</a>
+          <a class="btn" style="background-color: darkorange" href="#">Sau</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--modal xóa-->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Xóa vé</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Bạn có chắc chắn muốn xoá vé dưới đây không
+        </p>
+        <table class="table-delete">
+          <tr>
+            <td>Mã vé</td>
+            <td>Tên khách hàng</td>
+            <td>Biển số xe</td>
+            <td>Thời gian hết hiệu lực</td>
+          </tr>
+          <tr>
+            <td class="text-danger">1</td>
+            <td class="text-danger">Phan Thành Nhân</td>
+            <td class="text-danger">81-H1 20032</td>
+            <td class="text-danger">27/4/2023</td>
+          </tr>
+        </table>
+        <p class="text-danger">Lưu ý: khi xóa sẽ không thể hoàn tác!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="reset" class="btn" style="background-color: #e4e6eb" data-bs-dismiss="modal">Hủy</button>
+        <button class="btn" style="background-color: darkorange" data-bs-toggle="modal" data-bs-target="#warning">Xóa</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal cảnh báo-->
+<div class="modal fade" id="warning" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel2">Cảnh báo</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="text-danger">
+          Vé này chưa hết hạn không thể xóa
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" style="background-color: darkorange" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

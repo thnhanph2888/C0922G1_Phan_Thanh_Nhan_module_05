@@ -7,7 +7,7 @@ import {Customer} from '../../model/customer';
   styleUrls: ['./customer-list.component.css']
 })
   export class CustomerListComponent implements OnInit {
-
+  private color = 'red';
   constructor() { }
 
   ngOnInit(): void {

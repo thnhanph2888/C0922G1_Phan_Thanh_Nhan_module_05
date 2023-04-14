@@ -1,6 +1,7 @@
 package com.example.car_back_end.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import jdk.nashorn.internal.ir.annotations.Ignore;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -12,6 +13,7 @@ public class CarType {
     private int id;
     private String name;
     @JsonBackReference
+    @Ignore
     @OneToMany(mappedBy = "carType", cascade = CascadeType.REMOVE)
     private Set<Car> carSet;
     public CarType() {

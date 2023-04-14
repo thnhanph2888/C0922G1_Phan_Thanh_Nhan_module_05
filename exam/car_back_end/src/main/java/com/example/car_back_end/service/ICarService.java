@@ -9,4 +9,6 @@ public interface ICarService {
     boolean update(int id, Car car);
     boolean add(Car car);
     boolean delete(int id);
+
+    Car findById(int id);
 }

@@ -1,29 +1,35 @@
-package com.example.car_back_end.model;
+package com.example.car_back_end.dto;
 
-import javax.persistence.*;
+import com.example.car_back_end.model.CarType;
+import com.example.car_back_end.model.Departure;
+import com.example.car_back_end.model.Destination;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import java.sql.Time;
-
-@Entity
-public class Car {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class CarDto {
     private int id;
+    @NotBlank(message = "biển số xe không được để trống")
     private String licensePlates;
-    @ManyToOne
-    @JoinColumn(name = "carTypeId", referencedColumnName = "id")
+    @NotBlank(message = "loại xe không được để trống")
     private CarType carType;
+    @NotBlank(message = "tên nhà xe không được để trống")
     private String garage;
+    @NotBlank(message = "số điện thoại không được để trống")
     private String phone;
+    @Pattern(regexp = "/^([a-zA-Z0-9_\\.\\-])+\\@(([a-zA-Z0-9\\-])+\\.)+([a-zA-Z0-9]{2,4})+$/gm")
+    @NotBlank(message = "email không được để trống")
     private String email;
+    @NotBlank(message = "thời gian xuất phát không được để trống")
     private Time departureTime;
+    @NotBlank(message = "thời gian đến không được để trống")
     private Time arrivalTime;
-    @ManyToOne
-    @JoinColumn(name = "departureId", referencedColumnName = "id")
+    @NotBlank(message = "điểm xuất phát không được để trống")
     private Departure departure;
-    @ManyToOne
-    @JoinColumn(name = "destinationId", referencedColumnName = "id")
+    @NotBlank(message = "điểm đến không được để trống")
+
     private Destination destination;
-    public Car() {
+    public CarDto() {
     }
 
     public int getId() {

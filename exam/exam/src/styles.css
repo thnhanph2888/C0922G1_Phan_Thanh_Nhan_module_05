@@ -1,14 +1,14 @@
 #header {
-  background-color: rgb(15, 42, 15);
+  background-color: rgb(31, 29, 29);
 }
 .nav-color {
-  background-color: rgba(12, 70, 26, 0.91);
+  background-color: rgb(0, 0, 0);
 }
 #ul {
   padding: 5px 1px 5px;
   background-image: linear-gradient(  rgb(0, 82, 20),  rgb(0, 80, 17), rgb(0, 90, 24));
   position: relative;
-  background-color: rgb(0, 80, 17);
+  background-color: rgb(0, 87, 19);
   list-style-type: none;
   margin: 0;
   overflow: hidden;
@@ -37,12 +37,12 @@ select {
   width: 100%;
   border-collapse: collapse;
   padding: 0.5em;
-  background-color: rgba(189, 255, 126, 0.04);
+  background-color: rgba(210, 208, 208, 0.04);
 }
 
 #table th {
   color: #002807;
-  background-color: rgba(0, 97, 24, 0.13);
+  background-color: rgba(55, 61, 55, 0.13);
 }
 
 #table th, #table td {
@@ -59,7 +59,7 @@ select {
 .button {
   border-radius: 4px;
   margin: 5px;
-  background-color: rgba(0, 71, 0, 0.8);
+  background-color: rgba(59, 64, 59, 0.8);
   color: #ffffff;
 }
 
@@ -69,7 +69,7 @@ select {
 }
 
 .footer {
-  background-color: rgba(12, 70, 26, 0.78);
+  background-color: rgb(57, 69, 57);
   color: white;
 }
 
@@ -116,7 +116,10 @@ h2{
   color: white;
   border-radius: 4px;
    padding: 5px;
-   background-color: green;
+   background-color: rgba(62, 68, 62, 0.81);
    margin: 2px;
+}
+.m-number-page{
+   padding: 2px;
 }
 

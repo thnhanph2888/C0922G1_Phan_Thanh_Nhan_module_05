@@ -7,7 +7,6 @@ import {Contract} from '../../model/contract';
   styleUrls: ['./contract-list.component.css']
 })
 export class ContractListComponent implements OnInit {
-
   constructor() {
   }
 
